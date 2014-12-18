@@ -1,0 +1,26 @@
+{
+  "name": "djwaProfile",
+  "version": "1.0.0",
+  "description": "Jeremi's Profile",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install",
+    "prestart": "npm install",
+    "start": "http-server -a 0.0.0.0 -p 8000"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Jeremi Walewicz-Antonowicz",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "~1.3.12"
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.13"
+  }
+}

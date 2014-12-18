@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>djwaProfile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div ng-controller="ProfilePage1">
+                <input ng-model="data.message">
+                <p>{{data.message}}</p>
+            </div>
+            <div ng-controller="ProfilePage2">
+                <input ng-model="data.message">
+                <p>{{data.message}}</p>
+            </div>
+        </div>
+    </body>
+</html>
