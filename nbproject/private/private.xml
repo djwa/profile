@@ -3,9 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/praca/xampp/htdocs/angular-djwa/djwaProfile/app/index.html</file>
             <file>file:/C:/praca/xampp/htdocs/angular-djwa/djwaProfile/app/app.js</file>
             <file>file:/C:/praca/xampp/htdocs/angular-djwa/djwaProfile/app/less/style.less</file>
+=======
+            <file>file:/C:/xampp/htdocs/djwaProfile/app/index.html</file>
+            <file>file:/C:/xampp/htdocs/djwaProfile/app/app.js</file>
+>>>>>>> a1cc27d364344281efd04b1d81f1ccfad7f114c9
         </group>
     </open-files>
 </project-private>
