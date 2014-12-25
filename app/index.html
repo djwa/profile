@@ -12,11 +12,11 @@
         <div class="wrapper">
             <div ng-controller="ProfilePage1">
                 <input ng-model="data.message">
-                <p>{{data.message}}</p>
+                <p>{{ data.message }}</p>
             </div>
             <div ng-controller="ProfilePage2">
                 <input ng-model="data.message">
-                <p>{{reversedMessage(data.message)}}</p>
+                <p>{{ data.message | reverse }}</p>
             </div>
         </div>
     </body>
