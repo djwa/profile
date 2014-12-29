@@ -9,15 +9,24 @@
         <script type="text/javascript" src="app.js"></script>
     </head>
     <body>
-        <div class="wrapper">
-            <div ng-controller="ProfilePage1">
-                <input ng-model="data.message">
-                <p>{{ data.message }}</p>
+        <section id="main-list" class="wrapper">
+            <h1>Good fellas.</h1>
+            <div ng-controller="jListCrtl">
+                <input class="form-control" type="text" ng-model="search.$" />    
+                <ul class="list-group">
+                    <li class="list-group-item clearfix" ng-repeat="fella in fellas | filter:search | orderBy:'name'">
+                        <div class="col-lg-2">
+                            <h3>{{ fella.name}}</h3>
+                            <ul class="list-inline">
+                                <li ng-repeat="ff in fella.friends">{{ ff.name}}</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-10">
+                            <div class="blockquote-reverse">{{ fella.company}}</div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div ng-controller="ProfilePage2">
-                <input ng-model="data.message">
-                <p>{{ data.message | reverse }}</p>
-            </div>
-        </div>
+        </section>
     </body>
 </html>

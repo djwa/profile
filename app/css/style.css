@@ -6167,3 +6167,6 @@ button.close {
   max-width: 1200px;
   margin: 0 auto;
 }
+#main-list {
+  margin-top: 100px;
+}
