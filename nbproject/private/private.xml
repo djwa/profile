@@ -4,7 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/praca/xampp/htdocs/angular-djwa/djwaProfile/app/app.js</file>
+            <file>file:/C:/praca/xampp/htdocs/angular-djwa/djwaProfile/app/module-list/directive.js</file>
+            <file>file:/C:/praca/xampp/htdocs/angular-djwa/djwaProfile/app/module-list/controller.js</file>
             <file>file:/C:/praca/xampp/htdocs/angular-djwa/djwaProfile/app/index.html</file>
+            <file>file:/C:/praca/xampp/htdocs/angular-djwa/djwaProfile/app/less/style.less</file>
+            <file>file:/C:/praca/xampp/htdocs/angular-djwa/djwaProfile/app/partials/list.html</file>
         </group>
     </open-files>
 </project-private>
