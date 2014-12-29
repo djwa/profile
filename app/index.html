@@ -6,27 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
         <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="module-list/controller.js"></script>
+        <script type="text/javascript" src="module-list/directive.js"></script>
     </head>
     <body>
         <section id="main-list" class="wrapper">
             <h1>Good fellas.</h1>
-            <div ng-controller="jListCrtl">
-                <input class="form-control" type="text" ng-model="search.$" />    
-                <ul class="list-group">
-                    <li class="list-group-item clearfix" ng-repeat="fella in fellas | filter:search | orderBy:'name'">
-                        <div class="col-lg-2">
-                            <h3>{{ fella.name}}</h3>
-                            <ul class="list-inline">
-                                <li ng-repeat="ff in fella.friends">{{ ff.name}}</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-10">
-                            <div class="blockquote-reverse">{{ fella.company}}</div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <div ng-view></div>
         </section>
     </body>
 </html>
