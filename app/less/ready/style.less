@@ -1,0 +1,45 @@
+@import "bower_components/bootstrap-less/less/bootstrap.less";
+@import "less/_base.less";
+
+.shake {
+    animation: shake 0.1s normal;
+    -webkit-animation: shake 0.1s normal;
+}
+
+h1 {
+    transition: color 0.5s;
+}
+
+h1:hover {
+    color: rgb(241, 89, 41);
+}
+
+//keyframes
+
+@keyframes shake {
+    0% {margin-left: 5px; animation-timing-function: ease-in-out;}
+    10% {margin-left: 0px; animation-timing-function: ease-in-out;}
+    20% {margin-left: -5px; animation-timing-function: ease-in-out;}
+    30% {margin-left: 0px; animation-timing-function: ease-in-out;}
+    40% {margin-left: 5px; animation-timing-function: ease-in-out;}
+    50% {margin-left: 0px; animation-timing-function: ease-in-out;}
+    60% {margin-left: -5px; animation-timing-function: ease-in-out;}
+    70% {margin-left: 0px; animation-timing-function: ease-in-out;}
+    80% {margin-left: 5px; animation-timing-function: ease-in-out;}
+    90% {margin-left: 0px; animation-timing-function: ease-in-out;}
+    100% {margin-left: -5px; animation-timing-function: ease-in-out;}
+}
+
+@-webkit-keyframes shake {
+    0% {margin-left: 5px; -webkit-animation-timing-function: ease-in-out;}
+    10% {margin-left: 0px; -webkit-animation-timing-function: ease-in-out;}
+    20% {margin-left: -5px; -webkit-animation-timing-function: ease-in-out;}
+    30% {margin-left: 0px; -webkit-animation-timing-function: ease-in-out;}
+    40% {margin-left: 5px; -webkit-animation-timing-function: ease-in-out;}
+    50% {margin-left: 0px; -webkit-animation-timing-function: ease-in-out;}
+    60% {margin-left: -5px; -webkit-animation-timing-function: ease-in-out;}
+    70% {margin-left: 0px; -webkit-animation-timing-function: ease-in-out;}
+    80% {margin-left: 5px; -webkit-animation-timing-function: ease-in-out;}
+    90% {margin-left: 0px; -webkit-animation-timing-function: ease-in-out;}
+    100% {margin-left: -5px; -webkit-animation-timing-function: ease-in-out;}
+}

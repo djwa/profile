@@ -2,8 +2,7 @@
     'use strict';
     var app = angular.module('app', [
         'ngRoute',
-        'listControllers',
-        'listDirective'
+        'listControllers'
     ]);
 
     app.config(['$routeProvider', function ($routeProvider) {

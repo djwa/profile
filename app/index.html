@@ -8,13 +8,14 @@
         <script type="text/javascript" src="bower_components/angular/angular.js"></script>
         <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
         <script type="text/javascript" src="app.js"></script>
-        <script type="text/javascript" src="module-list/controller.js"></script>
-        <script type="text/javascript" src="module-list/directive.js"></script>
+        <script type="text/javascript" src="modules/list/controller.js"></script>
+        <script type="text/javascript" src="modules/list/directive.js"></script>
     </head>
     <body>
-        <section id="main-list" class="wrapper">
-            <h1>Good fellas.</h1>
-            <div ng-view></div>
-        </section>
-    </body>
+    <topbar></topbar>
+    <section id="main-list" class="wrapper">
+        <h1 enter="shake" leave>Good fellas.</h1>
+        <div ng-view></div>
+    </section>
+</body>
 </html>
