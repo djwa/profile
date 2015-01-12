@@ -6,13 +6,20 @@
     ]);
 
     app.config(['$routeProvider', function ($routeProvider) {
-            $routeProvider.
-                    when('/list', {
+            $routeProvider
+                    .when('/list', {
                         templateUrl: 'partials/list.html',
                         controller: 'jListCrtl'
-                    }).otherwise({
-                redirectTo: '/list'
-            });
+                    })
+                    .when('/home', {
+                        templateURL: 'partials/home.html'
+                    })
+                    .when('/error', {
+                        templateURL: 'partials/error.html'
+                    })
+                    .otherwise({
+                        redirectTo: '/error'
+                    });
         }]);
 
 })();
