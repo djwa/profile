@@ -10,9 +10,10 @@
                     when('/list', {
                         templateUrl: 'partials/list.html',
                         controller: 'jListCrtl'
-                    }).otherwise({
-                redirectTo: '/list'
-            });
+                    }).
+                    otherwise({
+                        redirectTo: '/list'
+                    });
         }]);
 
 })();
