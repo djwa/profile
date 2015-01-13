@@ -11,10 +11,17 @@
         <script type="text/javascript" src="modules/home/controller.js"></script>
         <script type="text/javascript" src="modules/list/controller.js"></script>
         <script type="text/javascript" src="modules/list/directive.js"></script>
+        <script type="text/javascript" src="bower_components/userapp/userapp.client.js"></script>
+        <script type="text/javascript" src="bower_components/userapp-angular/angularjs.userapp.js"></script>
     </head>
     <body>
     <topbar></topbar>
     <section id="main-list" class="wrapper">
+        <ul class="menu" ng-show="user.authenticated">
+            <li><a href="#/home">home</a></li>
+            <li><a href="#/list">list</a></li>
+            <li><a href="#/login" ua-logout>log out</a></li>
+        </ul>
         <h1 enter="shake" leave>Good fellas.</h1>
         <div ng-view></div>
     </section>
