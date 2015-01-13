@@ -11,11 +11,9 @@
                     .when('/list', {
                         templateUrl: 'partials/list.html',
                         controller: 'jListCrtl'
-<<<<<<< HEAD
                     }).
                     otherwise({
                         redirectTo: '/list'
-=======
                     })
                     .when('/home', {
                         templateUrl: 'partials/home.html',
@@ -26,7 +24,6 @@
                     })
                     .otherwise({
                         redirectTo: '/error'
->>>>>>> 78041d132df413161872a59238e186b66b81742f
                     });
         }]);
 
