@@ -2,7 +2,8 @@
     'use strict';
     var app = angular.module('app', [
         'ngRoute',
-        'listControllers'
+        'listControllers',
+        'homeControllers'
     ]);
 
     app.config(['$routeProvider', function ($routeProvider) {
@@ -12,10 +13,11 @@
                         controller: 'jListCrtl'
                     })
                     .when('/home', {
-                        templateURL: 'partials/home.html'
+                        templateUrl: 'partials/home.html',
+                        controller: 'hCrtl'
                     })
                     .when('/error', {
-                        templateURL: 'partials/error.html'
+                        templateUrl: 'partials/error.html'
                     })
                     .otherwise({
                         redirectTo: '/error'
