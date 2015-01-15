@@ -32,6 +32,9 @@
                     .when('/list', {
                         templateUrl: 'partials/list.html',
                         controller: 'jListCrtl'
+                    }).
+                    otherwise({
+                        redirectTo: '/list'
                     })
                     .when('/home', {
                         templateUrl: 'partials/home.html',
