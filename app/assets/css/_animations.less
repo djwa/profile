@@ -10,22 +10,29 @@ h1:hover {
     -webkit-animation: shake 0.1s normal;
 }
 
-.login-form-animiations {
+.login-form-animations {
     input {
         transition: 
             background-color 1s, 
             border-color 1s,
             color 1s;
     }
-.jplaceholder(@brand-color3,.9,color 1s,normal);    
+    .jplaceholder(@brand-color3,.9,color 1s,normal);    
+    button {
+        transition: 
+            background-color 1s;
+    }
 }
-.login-form-animiations:hover {
+.login-form-animations:hover {
     input {
         background-color: @brand-color1;
         border-color: @brand-color0;
         color: @brand-color0;
     }
     .jplaceholder(@brand-color0,.7,none,normal);   
+    button {
+        background-color: @brand-color2;
+    }
 }
 
 

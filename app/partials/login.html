@@ -3,7 +3,7 @@
         <img ng-src="http://localhost:8383/djwaProfile/app/assets/images/angular-logo.png" alt="Jeremi's Practice" />
     </div>
     <h1>Jeremi's Practice App</h1>
-    <div class='login-form login-form-animiations'>
+    <div class='login-form login-form-animations'>
         <form ua-login>
             <input name="login" placeholder="Username"><br>
             <input name="password" placeholder="Password" type="password"><br>
@@ -12,7 +12,6 @@
             <p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
             <p ng-show="error">{{ error.message}}</p>
         </form>
-        <p><a href="#/signup">Sign up</a></p>
-        <p><a href="#/reset-password">Reset password</a></p>
+        <p><a href="#/signup">Sign up</a> | <a href="#/reset-password">Reset password</a></p>
     </div>
 </article>
