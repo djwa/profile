@@ -1,15 +1,33 @@
+h1 {
+    transition: color 0.5s;
+}
+h1:hover {
+    color: @brand-color2;
+}
+
 .shake {
     animation: shake 0.1s normal;
     -webkit-animation: shake 0.1s normal;
 }
 
-h1 {
-    transition: color 0.5s;
+.login-form-animiations {
+    input {
+        transition: 
+            background-color 1s, 
+            border-color 1s,
+            color 1s;
+    }
+.jplaceholder(@brand-color3,.9,color 1s,normal);    
+}
+.login-form-animiations:hover {
+    input {
+        background-color: @brand-color1;
+        border-color: @brand-color0;
+        color: @brand-color0;
+    }
+    .jplaceholder(@brand-color0,.7,none,normal);   
 }
 
-h1:hover {
-    color: rgb(241, 89, 41);
-}
 
 //keyframes
 

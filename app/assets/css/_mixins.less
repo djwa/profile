@@ -1,0 +1,12 @@
+.jplaceholder (@color,@opacity,@transition, @font-weight) {
+    ::-webkit-input-placeholder {color: @color; opacity: @opacity; transition: @transition; -webkit-transition: @transition; font-weight: @font-weight;}
+    :-moz-placeholder {color: @color; opacity: @opacity; transition: @transition; -moz-transition: @transition; font-weight: @font-weight;}
+    ::-moz-placeholder {color: @color; opacity: @opacity; transition: @transition; -moz-transition: @transition; font-weight: @font-weight;}
+    :-ms-input-placeholder {color: @color; opacity: @opacity;transition: @transition; -ms-transition: @transition; font-weight: @font-weight;}
+}
+
+.border-radius(@i) {
+    border-radius: @i;
+    -webkit-border-radius: @i;
+    -moz-border-radius: @i;
+}
