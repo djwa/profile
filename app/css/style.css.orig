@@ -6163,15 +6163,25 @@ button.close {
     display: none !important;
   }
 }
+<<<<<<< HEAD
+=======
 topbar {
   display: block;
   width: 100%;
   height: 10px;
   background: #f15929;
 }
+>>>>>>> ed6947837a82a0789ed12e1718f47458448b8d14
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+}
+body {
+  background: #604788;
+  font-size: 16px;
+}
+h1 {
+  font-size: 2.2em;
 }
 .form-control {
   border-radius: 4px 4px 0 0;
@@ -6183,15 +6193,140 @@ topbar {
 #main-list ul li:nth-of-type(1) {
   border-radius: 0px;
 }
-.shake {
-  animation: shake 0.1s normal;
-  -webkit-animation: shake 0.1s normal;
+.login-box {
+  margin: 100px auto 0;
+  width: 360px;
+}
+.login-box .logo img {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 20px;
+  display: block;
+}
+.login-box h1 {
+  color: #ffffff;
+  text-align: center;
+}
+.login-box .login-form {
+  background: #ffffff;
+  padding: 12px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+.login-box .login-form input {
+  font-weight: bold;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  padding: 4px 8px;
+  margin: 6px 0;
+  width: 100%;
+  height: 40px;
+}
+.login-box .login-form button {
+  margin-top: 10px;
+  padding: 3px 15px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border: none;
+  min-width: 100px;
+  height: 40px;
+  background: #604788;
+  color: #ffffff;
+}
+@media (max-width: 360px) {
+  .login-box {
+    width: 90%;
+    margin: 20px auto;
+  }
+  .login-box h1 {
+    font-size: 1.46666667em;
+  }
 }
 h1 {
   transition: color 0.5s;
 }
 h1:hover {
   color: #f15929;
+}
+.shake {
+  animation: shake 0.1s normal;
+  -webkit-animation: shake 0.1s normal;
+}
+.login-form-animations input {
+  transition: background-color 1s, border-color 1s, color 1s;
+}
+.login-form-animations ::-webkit-input-placeholder {
+  color: #c5c5c5;
+  opacity: 0.9;
+  transition: color 1s;
+  -webkit-transition: color 1s;
+  font-weight: normal;
+}
+.login-form-animations :-moz-placeholder {
+  color: #c5c5c5;
+  opacity: 0.9;
+  transition: color 1s;
+  -moz-transition: color 1s;
+  font-weight: normal;
+}
+.login-form-animations ::-moz-placeholder {
+  color: #c5c5c5;
+  opacity: 0.9;
+  transition: color 1s;
+  -moz-transition: color 1s;
+  font-weight: normal;
+}
+.login-form-animations :-ms-input-placeholder {
+  color: #c5c5c5;
+  opacity: 0.9;
+  transition: color 1s;
+  -ms-transition: color 1s;
+  font-weight: normal;
+}
+.login-form-animations button {
+  transition: background-color 1s;
+}
+.login-form-animations:hover input {
+  background-color: #604788;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.login-form-animations:hover ::-webkit-input-placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+  transition: none;
+  -webkit-transition: none;
+  font-weight: normal;
+}
+.login-form-animations:hover :-moz-placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+  transition: none;
+  -moz-transition: none;
+  font-weight: normal;
+}
+.login-form-animations:hover ::-moz-placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+  transition: none;
+  -moz-transition: none;
+  font-weight: normal;
+}
+.login-form-animations:hover :-ms-input-placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+  transition: none;
+  -ms-transition: none;
+  font-weight: normal;
+}
+.login-form-animations:hover button {
+  background-color: #f15929;
 }
 @keyframes shake {
   0% {
