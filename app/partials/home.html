@@ -1,4 +1,17 @@
 <div class="home-view">
     <p>We're at home!</p>
-    {{ message }}
+</div>
+<a class="btn btn-primary" href="" ng-click="lion = !lion" ng-class="{ active: lion }">Toggle Lions</a>
+<a class="btn btn-success" href="" ng-click="wolf = !wolf" ng-class="{ active: wolf }">Toggle Cranes</a>
+<div class="row">
+    <div class="col-xs-6">
+        <div class="jumbotron jumpin jumpout" ng-show="lion">
+            <p>I am the lion!</p>
+        </div>
+    </div>
+    <div class="col-xs-6">
+        <div class="jumbotron jumpin jumpout" ng-show="wolf">
+            <p>I am the wolf!</p>
+        </div>
+    </div>
 </div>

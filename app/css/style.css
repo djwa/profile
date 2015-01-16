@@ -6163,6 +6163,9 @@ button.close {
     display: none !important;
   }
 }
+html {
+  overflow: scroll;
+}
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -6171,12 +6174,15 @@ body {
   background: #604788;
   font-size: 16px;
 }
+.view {
+  margin-top: 70px;
+}
 h1 {
   font-size: 2.2em;
-}
-header h1 {
-  margin-top: 100px;
   color: #ffffff;
+}
+header {
+  position: fixed;
 }
 .form-control {
   border-radius: 4px 4px 0 0;

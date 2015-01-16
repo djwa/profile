@@ -15,7 +15,6 @@
         <script type="text/javascript" src="bower_components/userapp/userapp.client.js"></script>
         <script type="text/javascript" src="bower_components/userapp-angular/angularjs.userapp.js"></script>
         <style type="text/css">
-            html {overflow: scroll;}
             .fadein.ng-enter,
             .fadeout.ng-leave {
                 -webkit-transition: all linear .3s;
@@ -42,9 +41,13 @@
             }
 
 
-            .jumpout.ng-hide-add         { 
+            .jumpin.ng-hide-add         { 
                 -webkit-animation:0.5s lightSpeedOut ease; 
                 animation:0.5s lightSpeedOut ease; 
+            }
+            .jumpout.ng-hide-remove         { 
+                -webkit-animation:0.5s lightSpeedIn ease; 
+                animation:0.5s lightSpeedIn ease; 
             }
 
             @-webkit-keyframes lightSpeedOut {
@@ -72,25 +75,52 @@
                 }
             }
 
-/*            .jumpin.ng-hide-add {
-                animation: 1s jumpin ease;
+            @-webkit-keyframes lightSpeedIn {
+
+                0% {
+                    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+                    transform: translate3d(100%, 0, 0) skewX(30deg);
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
             }
-            .jumpout.ng-hide-remove {
-                animation: 1s jumpout ease;
+
+            @keyframes lightSpeedIn {
+
+                0% {
+                    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+                    -ms-transform: translate3d(100%, 0, 0) skewX(30deg);
+                    transform: translate3d(100%, 0, 0) skewX(30deg);
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
             }
-            @keyframes jumpin {
-                0% {top: -100px;}
-                100% {top: 0px;}
-            }
-            @keyframes jumpout {
-                0% {top: 0px;}
-                100% {top: -100px;}
-            }*/
+
+            /*            .jumpin.ng-hide-add {
+                            animation: 1s jumpin ease;
+                        }
+                        .jumpout.ng-hide-remove {
+                            animation: 1s jumpout ease;
+                        }
+                        @keyframes jumpin {
+                            0% {top: -100px;}
+                            100% {top: 0px;}
+                        }
+                        @keyframes jumpout {
+                            0% {top: 0px;}
+                            100% {top: -100px;}
+            https://scotch.io/tutorials/animating-angular-apps-ngshow-and-nghide
+            https://scotch.io/tutorials/animating-angularjs-apps-ngview
+                        }*/
         </style>
     </head>
     <body>
         <main id="main-list" class="wrapper">
-            <header ng-show="user.authenticated" class="jumpout">
+            <header ng-show="user.authenticated">
                 <nav class="navbar navbar-default navbar-fixed-top fadein fadeout">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
@@ -102,7 +132,6 @@
                         </ul>
                     </div>
                 </nav>
-                <h1>Good fellas.</h1>
             </header>
             <div ng-view class="fadein fadeout view"></div>
         </main>
