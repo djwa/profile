@@ -56,8 +56,8 @@
                 }
 
                 100% {
-                    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
-                    transform: translate3d(100%, 0, 0) skewX(30deg);
+                    -webkit-transform: translate3d(0, -100%, 0);
+                    transform: translate3d(0, -100%, 0);
                     opacity: 0;
                 }
             }
@@ -68,9 +68,9 @@
                 }
 
                 100% {
-                    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
-                    -ms-transform: translate3d(100%, 0, 0) skewX(30deg);
-                    transform: translate3d(100%, 0, 0) skewX(30deg);
+                    -webkit-transform: translate3d(0, -100%, 0);
+                    -ms-transform: translate3d(0, -100%, 0);
+                    transform: translate3d(0, -100%, 0);
                     opacity: 0;
                 }
             }
@@ -78,8 +78,8 @@
             @-webkit-keyframes lightSpeedIn {
 
                 0% {
-                    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
-                    transform: translate3d(100%, 0, 0) skewX(30deg);
+                    -webkit-transform: translate3d(0, -100%, 0);
+                    transform: translate3d(0, -100%, 0);
                     opacity: 0;
                 }
                 100% {
@@ -90,9 +90,9 @@
             @keyframes lightSpeedIn {
 
                 0% {
-                    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
-                    -ms-transform: translate3d(100%, 0, 0) skewX(30deg);
-                    transform: translate3d(100%, 0, 0) skewX(30deg);
+                    -webkit-transform: translate3d(0, -100%, 0);
+                    -ms-transform: translate3d(0, -100%, 0);
+                    transform: translate3d(0, -100%, 0);
                     opacity: 0;
                 }
                 100% {
@@ -120,8 +120,7 @@
     </head>
     <body>
         <main id="main-list" class="wrapper">
-            <header ng-show="user.authenticated">
-                <nav class="navbar navbar-default navbar-fixed-top fadein fadeout">
+                <nav ng-show="user.authenticated" class="navbar navbar-default navbar-fixed-top jumpin jumpout">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#/home">home</a></li>
@@ -132,7 +131,6 @@
                         </ul>
                     </div>
                 </nav>
-            </header>
             <div ng-view class="fadein fadeout view"></div>
         </main>
     </body>
