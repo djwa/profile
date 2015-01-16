@@ -10,7 +10,7 @@
             <p><button type="submit">Log in</button> or <a href="" ua-oauth-link="google">Log in with Google</a></p>
 
             <p ng-show="loading"><img src="https://app.userapp.io/img/ajax-loader-transparent.gif"></p>
-            <p ng-show="error">{{ error.message}}</p>
+            <p ng-show="error" class="shake">{{ error.message}}</p>
         </form>
         <p><a href="#/signup">Sign up</a> | <a href="#/reset-password">Reset password</a></p>
     </div>

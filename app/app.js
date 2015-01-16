@@ -4,6 +4,7 @@
         'ngRoute',
         'listControllers',
         'homeControllers',
+        'ngAnimate',
         'UserApp'
     ]);
 

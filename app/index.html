@@ -7,17 +7,91 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script type="text/javascript" src="bower_components/angular/angular.js"></script>
         <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+        <script type="text/javascript" src="https://code.angularjs.org/1.3.8/angular-animate.js"></script>
         <script type="text/javascript" src="app.js"></script>
         <script type="text/javascript" src="modules/home/controller.js"></script>
         <script type="text/javascript" src="modules/list/controller.js"></script>
         <script type="text/javascript" src="modules/list/directive.js"></script>
         <script type="text/javascript" src="bower_components/userapp/userapp.client.js"></script>
         <script type="text/javascript" src="bower_components/userapp-angular/angularjs.userapp.js"></script>
+        <style type="text/css">
+            html {overflow: scroll;}
+            .fadein.ng-enter,
+            .fadeout.ng-leave {
+                -webkit-transition: all linear .3s;
+                -moz-transition: all linear .3s;
+                -o-transition: all linear .3s;
+                transition: all linear .3s;
+            }
+
+            .fadein.ng-enter {
+                opacity: 0;
+            }
+
+            .fadeout.ng-leave {
+                opacity: 1;
+            }
+
+            .fadein.ng-enter.ng-enter-active {
+                transition-delay: .3s;
+                opacity: 1;
+            }
+
+            .fadeout.ng-leave-active {
+                opacity: 0;
+            }
+
+
+            .jumpout.ng-hide-add         { 
+                -webkit-animation:0.5s lightSpeedOut ease; 
+                animation:0.5s lightSpeedOut ease; 
+            }
+
+            @-webkit-keyframes lightSpeedOut {
+                0% {
+                    opacity: 1;
+                }
+
+                100% {
+                    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+                    transform: translate3d(100%, 0, 0) skewX(30deg);
+                    opacity: 0;
+                }
+            }
+
+            @keyframes lightSpeedOut {
+                0% {
+                    opacity: 1;
+                }
+
+                100% {
+                    -webkit-transform: translate3d(100%, 0, 0) skewX(30deg);
+                    -ms-transform: translate3d(100%, 0, 0) skewX(30deg);
+                    transform: translate3d(100%, 0, 0) skewX(30deg);
+                    opacity: 0;
+                }
+            }
+
+/*            .jumpin.ng-hide-add {
+                animation: 1s jumpin ease;
+            }
+            .jumpout.ng-hide-remove {
+                animation: 1s jumpout ease;
+            }
+            @keyframes jumpin {
+                0% {top: -100px;}
+                100% {top: 0px;}
+            }
+            @keyframes jumpout {
+                0% {top: 0px;}
+                100% {top: -100px;}
+            }*/
+        </style>
     </head>
     <body>
         <main id="main-list" class="wrapper">
-            <section ng-show="user.authenticated">
-                <nav class="navbar navbar-default navbar-fixed-top">
+            <header ng-show="user.authenticated" class="jumpout">
+                <nav class="navbar navbar-default navbar-fixed-top fadein fadeout">
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="#/home">home</a></li>
@@ -28,9 +102,9 @@
                         </ul>
                     </div>
                 </nav>
-                <h1 enter="shake" leave>Good fellas.</h1>
-            </section>
-            <div ng-view></div>
+                <h1>Good fellas.</h1>
+            </header>
+            <div ng-view class="fadein fadeout view"></div>
         </main>
     </body>
 </html>
