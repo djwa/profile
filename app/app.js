@@ -4,9 +4,12 @@
         'ngRoute',
         'listControllers',
         'homeControllers',
+        'ngAnimate',
         'UserApp'
     ]);
-
+    app.controller('mainCrtl',['$scope',function($scope){
+            $scope.path = "http://djwa.pl/angular-logo.png";
+    }]);
     app.config(['$routeProvider', function ($routeProvider) {
             $routeProvider
                     .when('/login', {
