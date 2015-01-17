@@ -36,6 +36,44 @@ h1:hover {
 }
 
 
+// angular animations
+
+.fadein.ng-enter,
+.fadeout.ng-leave {
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    transition: all linear .3s;
+}
+
+.fadein.ng-enter {
+    opacity: 0;
+}
+
+.fadeout.ng-leave {
+    opacity: 1;
+}
+
+.fadein.ng-enter.ng-enter-active {
+    transition-delay: .3s;
+    opacity: 1;
+}
+
+.fadeout.ng-leave-active {
+    opacity: 0;
+}
+
+
+.slide-down.ng-hide-add         { 
+    -webkit-animation:0.5s slideDown ease; 
+    animation:0.5s slideDown ease; 
+}
+.slide-up.ng-hide-remove         { 
+    -webkit-animation:0.5s slideUp ease; 
+    animation:0.5s slideUp ease; 
+}
+
+
 //keyframes
 
 @keyframes shake {
@@ -64,4 +102,56 @@ h1:hover {
     80% {margin-left: 5px; -webkit-animation-timing-function: ease-in-out;}
     90% {margin-left: 0px; -webkit-animation-timing-function: ease-in-out;}
     100% {margin-left: -5px; -webkit-animation-timing-function: ease-in-out;}
+}
+
+
+
+@-webkit-keyframes slideDown {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, -100%, 0);
+        -ms-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideUp {
+
+    0% {
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+
+    0% {
+        -webkit-transform: translate3d(0, -100%, 0);
+        -ms-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
