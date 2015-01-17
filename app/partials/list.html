@@ -1,17 +1,19 @@
-<h1>Good fellas.</h1>
-<fellaslist>
-    <input class="form-control" type="text" ng-model="search.$" />    
-    <ul class="list-group">
-        <li class="list-group-item clearfix" enter="shake" leave ng-repeat="fella in fellas| filter:search | orderBy:'name'">
-            <div class="col-lg-5">
-                <h3>{{ fella.name}}</h3>
-                <ul class="list-inline">
-                    <li ng-repeat="ff in fella.friends">{{ ff.name}}</li>
-                </ul>
-            </div>
-            <div class="col-lg-7">
-                <div class="blockquote-reverse">{{ fella.company}}</div>
-            </div>
-        </li>
-    </ul>
-</fellaslist>
+<div class="wrapper">
+    <h1>Good fellas.</h1>
+    <fellaslist>
+        <input class="form-control" type="text" ng-model="search.$" />    
+        <ul class="list-group">
+            <li class="list-group-item clearfix" enter="shake" leave ng-repeat="fella in fellas| filter:search | orderBy:'name'">
+                <div class="col-lg-5">
+                    <h3>{{ fella.name}}</h3>
+                    <ul class="list-inline">
+                        <li ng-repeat="ff in fella.friends">{{ ff.name}}</li>
+                    </ul>
+                </div>
+                <div class="col-lg-7">
+                    <div class="blockquote-reverse">{{ fella.company}}</div>
+                </div>
+            </li>
+        </ul>
+    </fellaslist>
+</div>

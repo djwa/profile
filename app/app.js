@@ -8,7 +8,7 @@
         'UserApp'
     ]);
     app.controller('mainCrtl',['$scope',function($scope){
-            $scope.path = "http://djwa.pl/angular-logo.png";
+            $scope.LogoImgPath = "http://djwa.pl/angular-logo.png";
     }]);
     app.config(['$routeProvider', function ($routeProvider) {
             $routeProvider
@@ -35,11 +35,8 @@
                     .when('/list', {
                         templateUrl: 'partials/list.html',
                         controller: 'jListCrtl'
-                    }).
-                    otherwise({
-                        redirectTo: '/list'
                     })
-                    .when('/home', {
+                    .when('/dashboard', {
                         templateUrl: 'partials/home.html',
                         controller: 'hCrtl'
                     })
@@ -47,7 +44,7 @@
                         templateUrl: 'partials/error.html'
                     })
                     .otherwise({
-                        redirectTo: '/home'
+                        redirectTo: '/dashboard'
                     });
         }]);
     app.run(function (user) {

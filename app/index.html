@@ -16,19 +16,19 @@
         <script type="text/javascript" src="bower_components/userapp-angular/angularjs.userapp.js"></script>
     </head>
     <body>
-        <main id="main-list" class="wrapper">
-                <nav ng-show="user.authenticated" class="navbar navbar-default navbar-fixed-top slide-down slide-up">
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#/home">home</a></li>
-                            <li><a href="#/list">list</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#/login" ua-logout>log out</a></li>
-                        </ul>
-                    </div>
-                </nav>
-            <div ng-view class="fadein fadeout view {{ pageClass }}"></div>
+        <main>
+            <nav ng-show="user.authenticated" class="navbar navbar-default navbar-fixed-top slide-down slide-up">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#/dashboard">home</a></li>
+                        <li><a href="#/list">list</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#/login" ua-logout>log out</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="fadein fadeout view {{ pageClass}}" ng-view></div>
         </main>
     </body>
 </html>

@@ -6164,34 +6164,36 @@ button.close {
   }
 }
 html {
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
 }
 body {
-  background: #604788;
   font-size: 16px;
+  background: #604788;
 }
 .view {
-  margin-top: 70px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  min-height: 100vh;
 }
 h1 {
   font-size: 2.2em;
   color: #ffffff;
 }
-.form-control {
+.listPage {
+  background: #f15929;
+}
+.listPage .form-control {
   border-radius: 4px 4px 0 0;
   border-bottom: none;
 }
-#main-list {
-  margin-top: 50px;
-}
-#main-list ul li:nth-of-type(1) {
+.listPage ul li:nth-of-type(1) {
   border-radius: 0px;
 }
-.home-view {
+.homePage .home-view {
   color: #ffffff;
 }
 .login-box {

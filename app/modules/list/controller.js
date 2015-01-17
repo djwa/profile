@@ -3,7 +3,7 @@
     list.controller('jListCrtl', ['$http', '$scope', function ($http, $scope) {
             $http.get('data/fellas.json').success(function (data) {
                 $scope.fellas = data;
-                $scope.pageClass = "lista";
+                $scope.pageClass = "listPage";
             });
         }]);
 })();
