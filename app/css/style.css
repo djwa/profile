@@ -6179,6 +6179,9 @@ body {
   padding-bottom: 20px;
   min-height: 100vh;
 }
+.log-out {
+  padding-right: 20px;
+}
 h1 {
   font-size: 2.2em;
   color: #ffffff;

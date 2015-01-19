@@ -7,9 +7,14 @@
         'ngAnimate',
         'UserApp'
     ]);
-    app.controller('mainCrtl',['$scope',function($scope){
+    app.controller('pathsCrtl', ['$scope', function ($scope) {
             $scope.LogoImgPath = "http://djwa.pl/angular-logo.png";
-    }]);
+        }]);
+    app.controller('siteLocationCrtl', ['$scope', '$location', function ($scope, $location) {
+            $scope.isActive = function(route){
+                return route === $location.path();
+            };
+        }]);
     app.config(['$routeProvider', function ($routeProvider) {
             $routeProvider
                     .when('/login', {
