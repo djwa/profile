@@ -12,7 +12,7 @@
             $scope.LogoImgPath = "http://djwa.pl/angular-logo.png";
         }]);
     app.controller('siteLocationCrtl', ['$scope', '$location', function ($scope, $location) {
-            $scope.isActive = function(route){
+            $scope.isActive = function (route) {
                 return route === $location.path();
             };
         }]);
