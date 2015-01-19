@@ -6214,17 +6214,44 @@ h1 {
   left: 0;
   right: 0;
 }
-.listPage .form-control {
+.listPage header {
+  height: 50px;
+  margin-top: 20px;
+}
+.listPage header h1 {
+  margin: 0;
+}
+.listPage header p {
+  color: #fff;
+  padding-top: 15px;
+}
+.listPage fellaslist .form-control {
   border-radius: 4px 4px 0 0;
   border-bottom: none;
 }
-.listPage ul li:nth-of-type(1) {
+.listPage fellaslist ul li:nth-of-type(1) {
   border-radius: 0px;
 }
-.listPage li {
+.listPage fellaslist li {
   overflow: hidden;
   background: #604788 !important;
   color: #ffffff !important;
+}
+.listPage .new-list {
+  background: #4b2f77;
+  margin-top: -30px;
+  padding: 10px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+}
+.listPage .new-list form {
+  background: #ffffff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
 }
 .homePage .home-view {
   color: #ffffff;

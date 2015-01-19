@@ -1,6 +1,6 @@
 <div class="wrapper container">
-    <div class="row">
-        <div ng-show="{{'oldList'}}" class="col-xs-{{gridColumn}}">
+    <div class="row {{currentList}}" ng-show="{{'oldList'}}">
+        <div  class="col-xs-{{gridColumn}}">
             <h1>Good fellas.</h1>
             <fellaslist>
                 <input class="form-control" type="text" ng-model="search.$" />    
@@ -19,12 +19,16 @@
                 </ul>
             </fellaslist>
         </div>
-        <div ng-show="{{'newList'}}" class="col-xs-{{gridColumn}}">
-            <h1>Bad fellas.</h1>
+    </div>
+    <div class="row {{currentList}}" ng-show="{{'newList'}}">
+        <div class="col-xs-{{gridColumn}}">
+            <header>
+                <h1>Bad fellas.</h1>
+            </header>
             <fellaslist>
-                <input class="form-control" type="text" ng-model="search.$" />    
+                <input class="form-control" type="text" placeholder="...search for fellas" ng-model="search.$" />    
                 <ul class="list-group">
-                    <li class="list-group-item clearfix" ng-repeat="fella in fellas| filter:search | orderBy:'name'">
+                    <li class="list-group-item clearfix" enter="shake" leave ng-repeat="fella in fellas| filter:search | orderBy:'name'">
                         <div class="col-lg-5">
                             <h3>{{ fella.name}}</h3>
                         </div>
@@ -35,8 +39,31 @@
                 </ul>
             </fellaslist>
         </div>
-        <div ng-show="{{'newList'}}" class="col-xs-{{gridColumn}}">
-            blablabla
+        <div class="col-xs-{{gridColumn}}">
+            <header>
+                <p>Update the list with a new fella!</p>
+            </header>
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputName1">First name</label>
+                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Enter first name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputFile">File input</label>
+                    <input type="file" id="exampleInputFile">
+                    <p class="help-block">Example block-level help text here.</p>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Check me out
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
         </div>
     </div>
 </div>

@@ -4,7 +4,33 @@
     margin-right: auto;
     left:0;
     right:0;
-    .form-control {border-radius: 4px 4px 0 0; border-bottom: none;}
-    ul li:nth-of-type(1) {border-radius: 0px;}
-    li {overflow: hidden; background: @brand-color1!important; color:@brand-color0!important}
+    header {
+        height: 50px;
+        margin-top: 20px;
+        h1 {
+            margin: 0;
+        }
+        p {
+            color:#fff;
+            padding-top: 15px;
+        }
+    }
+    fellaslist {
+        .form-control {border-radius: 4px 4px 0 0; border-bottom: none;}
+        ul li:nth-of-type(1) {border-radius: 0px;}
+        li {overflow: hidden; background: @brand-color1!important; color:@brand-color0!important}
+    } 
+    .old-list {}
+    .new-list {
+        background: rgb(75, 47, 119);
+        margin-top: -30px;
+        padding: 10px;
+        .border-radius(6px);
+        form {
+            background: @brand-color0;
+            padding: 10px;
+            margin-bottom: 20px;
+            .border-radius(4px);
+        }
+    }
 }

@@ -40,7 +40,7 @@
                     })
                     .when('/list', {
                         templateUrl: 'partials/list.html',
-                        controller: 'jListCrtl'
+                        controller: 'jList2Crtl'
                     })
                     .when('/dashboard', {
                         templateUrl: 'partials/home.html',
