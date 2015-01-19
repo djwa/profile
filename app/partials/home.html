@@ -1,18 +1,22 @@
-<div class="wrapper">
-    <div class="home-view">
-        <p>We're at home!</p>
-    </div>
-    <a class="btn btn-primary" href="" ng-click="lion = !lion" ng-class="{ active: lion }">Lion</a>
-    <a class="btn btn-success" href="" ng-click="wolf = !wolf" ng-class="{ active: wolf }">Wolf</a>
+<div class="wrapper container">
     <div class="row">
-        <div class="col-xs-6">
-            <div class="jumbotron slide-down slide-up" ng-show="lion">
-                <p>I am the lion!</p>
+        <div class="col-xs-12">
+            <div class="home-view">
+                <p>We're at home!</p>
             </div>
-        </div>
-        <div class="col-xs-6">
-            <div class="jumbotron slide-down slide-up" ng-show="wolf">
-                <p>I am the wolf!</p>
+            <a class="btn btn-primary" href="" ng-click="lion = !lion" ng-class="{ active: lion }">Lion</a>
+            <a class="btn btn-success" href="" ng-click="wolf = !wolf" ng-class="{ active: wolf }">Wolf</a>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="jumbotron slide-down slide-up" ng-show="lion">
+                        <p>I am the lion!</p>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="jumbotron slide-down slide-up" ng-show="wolf">
+                        <p>I am the wolf!</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -5,7 +5,8 @@
         'listControllers',
         'homeControllers',
         'ngAnimate',
-        'UserApp'
+        'UserApp',
+        'ui.bootstrap'
     ]);
     app.controller('pathsCrtl', ['$scope', function ($scope) {
             $scope.LogoImgPath = "http://djwa.pl/angular-logo.png";

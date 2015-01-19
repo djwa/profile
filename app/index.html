@@ -7,18 +7,23 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <script type="text/javascript" src="bower_components/angular/angular.js"></script>
         <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
-        <script type="text/javascript" src="https://code.angularjs.org/1.3.8/angular-animate.js"></script>
+        <script type="text/javascript" src="assets/js/angular-animate-1.3.8.js"></script>
         <script type="text/javascript" src="app.js"></script>
         <script type="text/javascript" src="modules/home/controller.js"></script>
         <script type="text/javascript" src="modules/list/controller.js"></script>
         <script type="text/javascript" src="modules/list/directive.js"></script>
         <script type="text/javascript" src="bower_components/userapp/userapp.client.js"></script>
         <script type="text/javascript" src="bower_components/userapp-angular/angularjs.userapp.js"></script>
+        <script type="text/javascript" src="assets/js/ui-bootstrap-collapse-0.12.0.js"></script>
     </head>
     <body>
         <main>
-            <nav ng-show="user.authenticated" class="navbar navbar-default navbar-fixed-top slide-down slide-up">
-                <div class="collapse navbar-collapse">
+            <nav ng-show="user.authenticated" class="navbar navbar-default navbar-fixed-top slide-down slide-up" role="navigation">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="logo" ng-controller='pathsCrtl'>
+                        <img ng-src="{{LogoImgPath}}" alt="Jeremi's Practice" />
+                        <h2>JPA</h2>
+                    </div>
                     <ul class="nav navbar-nav" ng-controller="siteLocationCrtl">
                         <li ng-class="{active: isActive('/dashboard')}"><a href="#/dashboard">home</a></li>
                         <li ng-class="{active: isActive('/list')}"><a href="#/list">list</a></li>
