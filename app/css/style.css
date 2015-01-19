@@ -6198,6 +6198,7 @@ nav .logo h2 {
   display: block;
   float: left;
   line-height: 0.8em;
+  font-weight: bold;
 }
 nav .log-out {
   padding-right: 20px;
