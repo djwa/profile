@@ -8,10 +8,10 @@
         'UserApp',
         'ui.bootstrap'
     ]);
-    app.controller('pathsCrtl', ['$scope', function ($scope) {
+    app.controller('PathsCrtl', ['$scope', function ($scope) {
             $scope.LogoImgPath = "http://djwa.pl/angular-logo.png";
         }]);
-    app.controller('siteLocationCrtl', ['$scope', '$location', function ($scope, $location) {
+    app.controller('SiteLocationCrtl', ['$scope', '$location', function ($scope, $location) {
             $scope.isActive = function (route) {
                 return route === $location.path();
             };
@@ -40,7 +40,7 @@
                     })
                     .when('/list', {
                         templateUrl: 'partials/list.html',
-                        controller: 'jList2Crtl'
+                        controller: 'List2Crtl'
                     })
                     .when('/dashboard', {
                         templateUrl: 'partials/home.html',
