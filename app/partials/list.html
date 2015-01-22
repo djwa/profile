@@ -43,7 +43,7 @@
             <header>
                 <p>Update the list with a new fella!</p>
             </header>
-            <form name="AddNewFella">
+            <form name="AddNewFella" ng-submit="addNew()">
                 <div class="form-group">
                     <input type="text" ng-model="fella.name" class="form-control" placeholder="Enter first name" required>
                 </div>
@@ -59,7 +59,8 @@
                 <div class="form-group">
                     <input type="tel" ng-model="fella.phone" class="form-control" placeholder="Enter phone number" required>
                 </div>
-                <button ng-disabled="!AddNewFella.$valid" type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-default">Submit</button>
+                <!--ng-disabled="!AddNewFella.$valid"-->
             </form>
         </div>
     </div>
