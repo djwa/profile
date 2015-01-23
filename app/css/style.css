@@ -6222,7 +6222,7 @@ h1 {
   margin: 0;
 }
 .listPage header p {
-  color: #fff;
+  color: #ffffff;
   padding-top: 15px;
 }
 .listPage fellaslist .form-control {
@@ -6252,6 +6252,9 @@ h1 {
   border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+}
+.listPage p {
+  color: #ffffff;
 }
 .homePage .home-view {
   color: #ffffff;
