@@ -1,11 +1,26 @@
 (function () {
     var list = angular.module('listControllers', ['listDirectives']);
     //service
-    list.factory('fellaservice', [function () {
-            var o = {
-                posts: []
+    list.factory('fellaservice', ['$http', function ($http) {
+            //method1
+            return {
+                getData: function () {
+                    return $http({
+                        url: 'data/data-test.json',
+                        method: 'GET'
+                    });
+                }
             };
-            return o;
+
+//            return function () {
+//                this.initialize = function () {
+//                    var url = 'data/data-test.json';
+//                    $http.get(url).success(function(data){
+//                        fellas = data;
+//                    });
+//                };
+//                this.initialize();
+//            };
         }]);
     //controllers
     list.controller('ListCrtl', ['$http', '$scope', function ($http, $scope) {
@@ -25,13 +40,15 @@
             $scope.oldList = false;
             $scope.newList = true;
             $scope.currentList = 'new-list';
+
             //scope of data
-            $scope.fellaservice = [];
-            $http.get('data/data-test.json').success(function (data) {
+
+            //method 1
+            $scope.fellas = [];
+            fellaservice.getData().success(function (data) {
                 $scope.fellas = data;
                 $scope.addNew = function () {
                     console.log('Adding the form scope!');
-
                     var userUpdate = {
                         name: $scope.fella.name,
                         surname: $scope.fella.surname,
@@ -39,14 +56,33 @@
                         email: $scope.fella.email,
                         phone: $scope.fella.phone
                     };
-
                     data.push(userUpdate);
-                    $scope.msg = 'Data sent: '+ JSON.stringify(data);
+                    $scope.msg = 'Data sent: ' + JSON.stringify(data);
                 };
-            }).error(function () {
-                $scope.newList = false;
-                $scope.msg = "Sorry but there was a connection problem. Data has not been injected. :(";
             });
+
+
+
+//            $http.get('data/data-test.json').success(function (data) {
+//                $scope.fellas = data;
+//                $scope.addNew = function () {
+//                    console.log('Adding the form scope!');
+//
+//                    var userUpdate = {
+//                        name: $scope.fella.name,
+//                        surname: $scope.fella.surname,
+//                        company: $scope.fella.company,
+//                        email: $scope.fella.email,
+//                        phone: $scope.fella.phone
+//                    };
+//
+//                    data.push(userUpdate);
+//                    $scope.msg = 'Data sent: ' + JSON.stringify(data);
+//                };
+//            }).error(function () {
+//                $scope.newList = false;
+//                $scope.msg = "Sorry but there was a connection problem. Data has not been injected. :(";
+//            });
         }]);
 })();
 
