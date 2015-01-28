@@ -6,7 +6,7 @@
             return {
                 getData: function () {
                     return $http({
-                        url: 'data/data-test.json',
+                        url: 'http://localhost:3000/fellas',
                         method: 'GET'
                     });
                 }
