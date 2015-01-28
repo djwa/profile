@@ -10,4 +10,6 @@ http://adrianmejia.com/blog/2014/09/28/angularjs-tutorial-for-beginners-with-nod
 http://adrianmejia.com/blog/2014/10/01/creating-a-restful-api-tutorial-with-nodejs-and-mongodb/
 
 
-test
+Add the path to windows for mongodb.
+Import JSON data.
+Install Advanced Rest Client chrome extension.
