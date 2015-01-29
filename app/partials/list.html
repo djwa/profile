@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="row {{currentList}}" ng-show="{{'newList'}}">
-        <div class="col-xs-{{gridColumn}}">
+        <div class="col-md-{{gridColumn}}">
             <header>
                 <h1>Bad fellas.</h1>
             </header>
@@ -29,20 +29,20 @@
                 <input class="form-control" type="text" placeholder="...search for fellas" ng-model="search.$" />    
                 <ul class="list-group">
                     <li class="list-group-item clearfix" enter="shake" leave ng-repeat="fella in fellas| filter:search | orderBy:'surname'">
-                        <div class="col-lg-4">
-                            <h4>{{ fella.name + fella.surname }}</h4>
+                        <div class="col-xs-4">
+                            <p>{{ fella.name + " " + fella.surname}}</p>
                         </div>
-                        <div class="col-lg-5">
-                            <h4>{{ fella.company }}</h4>
+                        <div class="col-xs-5">
+                            <p>{{ fella.company}}</p>
                         </div>
-                        <div class="col-lg-3">
-                            <button class="btn-xs" ng-click="removeFella(fella._id)">remove</button>
+                        <div class="col-xs-3">
+                            <button class="btn btn-danger dropdown-toggle pull-right" ng-click="removeFella(fella._id)">X</button>
                         </div>
                     </li>
                 </ul>
             </fellaslist>
         </div>
-        <div class="col-xs-{{gridColumn}}">
+        <div class="col-md-{{gridColumn}}">
             <header>
                 <p>Update the list with a new fella!</p>
             </header>
@@ -67,5 +67,5 @@
             </form>
         </div>
     </div>
-    <p>{{ msg }}</p>
+    <p>{{ msg}}</p>
 </div>

@@ -7,14 +7,21 @@
 //            return {
 //                getData: function () {
 //                    return $http({
-//                        url: url,
-//                        method: 'GET'
+//                        method: 'GET',
+//                        url: url
 //                    });
 //                },
 //                postData: function () {
 //                    return $http({
-//                        url: url,
 //                        method: 'POST',
+//                        url: url,
+//                        data: 'fella'
+//                    });
+//                },
+//                removeData: function () {
+//                    return $http({
+//                        method: 'DELETE',
+//                        url: url + id,
 //                        data: 'fella'
 //                    });
 //                }
@@ -45,20 +52,32 @@
 //            fellaservice.getData().success(function (data) {
 //                $scope.fellas = data;
 //            });
+//
 //            $scope.addNew = function (fella) {
-//                fellaservice.postData(fella).success(function (data) {
-//                    console.log('Adding the form scope!', data);
-//                });
-////                var userUpdate = {
-////                    name: $scope.fella.name,
-////                    surname: $scope.fella.surname,
-////                    company: $scope.fella.company,
-////                    email: $scope.fella.email,
-////                    phone: $scope.fella.phone
-////                };
-////                data.push(userUpdate);
-////                $scope.msg = 'Data sent: ' + JSON.stringify(data);
+//                fellaservice.postData()
+//                        .success(function (data) {
+////                            console.log(data);
+////                            $scope.msg = 'Data sent?: ' + JSON.stringify(data);
+//                            $scope.fellas = data;
+//                        })
+//                        .error(function () {
+//                            $scope.newList = false;
+//                            $scope.msg = "Sorry but there was a connection problem. Data has not been injected. :(";
+//                        });
 //            };
+//
+//
+//            $scope.removeFella = function (id) {
+//                fellaservice.removeData()
+//                        .success(function (data) {
+////                            console.log(data);
+//                            $scope.fellas = data;
+//                        })
+//                        .error(function () {
+//                            $scope.msg = "If you want justice, you've come to the wrong place...";
+//                        });
+//            };
+
 
 
             $http.get('http://localhost:3000/fellas')
@@ -86,8 +105,8 @@
 //                            console.log(data);
                             $scope.fellas = data;
                         })
-                        .error(function(){
-                            $scope.msg = "If you came for a justice, you came to the wrong place...";
+                        .error(function () {
+                            $scope.msg = "If you want justice, you've come to the wrong place...";
                         });
             };
 
