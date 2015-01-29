@@ -29,11 +29,14 @@
                 <input class="form-control" type="text" placeholder="...search for fellas" ng-model="search.$" />    
                 <ul class="list-group">
                     <li class="list-group-item clearfix" enter="shake" leave ng-repeat="fella in fellas| filter:search | orderBy:'surname'">
-                        <div class="col-lg-5">
+                        <div class="col-lg-4">
                             <h4>{{ fella.name + fella.surname }}</h4>
                         </div>
-                        <div class="col-lg-7">
+                        <div class="col-lg-5">
                             <h4>{{ fella.company }}</h4>
+                        </div>
+                        <div class="col-lg-3">
+                            <button class="btn-xs" ng-click="removeFella(fella._id)">remove</button>
                         </div>
                     </li>
                 </ul>
@@ -54,7 +57,7 @@
                     <input type="text" ng-model="fella.company" class="form-control" placeholder="Enter company name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" ng-model="fella.email" class="form-control" placeholder="Enter email" required>
+                    <input type="email" ng-model="fella.email" class="form-control" placeholder="Enter email"  unique-email required>
                 </div>
                 <div class="form-group">
                     <input type="tel" ng-model="fella.phone" class="form-control" placeholder="Enter phone number" required>

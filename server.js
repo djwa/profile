@@ -24,32 +24,29 @@ app.get('/fellas', function (req, res) {
         res.send(doc);
     });
 });
-//app.post('/fellas', function (req, res) {
-////        res.send(req.body);
-//        
-//        data.push(req.body);
-//        res.send(data);
-//});
-
 
 app.post('/fellas', function (req, res) {
-    var Fella;
-    console.log("POST: ");
-    console.log(req.body);
-    Fella = new FellaModel({
-        name: req.body.name,
-        surname: req.body.surname,
-        company: req.body.company,
-        email: req.body.email,
-        phone: req.body.phone
+    Fella.create(req.body, function (err, post) {
+        if (err)
+            return next(err);
+        Fella.find(function (err, post) {
+            if (err)
+                res.send(err);
+            res.json(post);
+        });
     });
-    Fella.save(function (err) {
-        if (!err) {
-            return console.log("created");
-        } else {
-            return console.log(err);
-        }
-    });
-    return res.send(fella);
 });
+
+app.delete('/fellas/:fella_id', function (req, res) {
+    Fella.remove({_id: req.params.fella_id}, function (err, post) {
+        if (err)
+            return next(err);
+        Fella.find(function (err, post) {
+            if (err)
+                res.send(err);
+            res.json(post);
+        });
+    });
+});
+
 app.listen(3000);

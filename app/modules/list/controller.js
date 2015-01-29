@@ -80,6 +80,16 @@
                         });
             };
 
+            $scope.removeFella = function (id) {
+                $http.delete('http://localhost:3000/fellas/' + id)
+                        .success(function (data) {
+//                            console.log(data);
+                            $scope.fellas = data;
+                        })
+                        .error(function(){
+                            $scope.msg = "If you came for a justice, you came to the wrong place...";
+                        });
+            };
 
 
 
