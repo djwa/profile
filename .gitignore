@@ -2,7 +2,4 @@ bower_components/
 node_modules/
 nbproject/
 test/
-dist
-.tmp
 .idea
-*.mo
