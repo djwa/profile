@@ -1,4 +1,8 @@
 bower_components/
 node_modules/
+nbproject/
 test/
-/nbproject/private/
+dist
+.tmp
+.idea
+*.mo

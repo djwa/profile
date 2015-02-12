@@ -1,8 +1,8 @@
 {
   "name": "djwaProfile",
-  "version": "1.0.0",
-  "description": "Jeremi's Profile",
-  "main": "index.js",
+  "version": "1.0.0.1b",
+  "description": "dJWA",
+  "main": "",
   "directories": {
     "test": "test"
   },
