@@ -4,5 +4,5 @@ nbproject/
 test/
 dist
 .tmp
-.idea
+.idea/
 *.mo
