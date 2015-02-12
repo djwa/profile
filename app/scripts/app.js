@@ -1,6 +1,7 @@
 (function () {
     'use strict';
     var app = angular.module('app', [
+        //todo: change for ui router
         'ngRoute',
         'listControllers',
         'homeControllers',
@@ -18,6 +19,7 @@
         }]);
     app.config(['$routeProvider', function ($routeProvider) {
             $routeProvider
+                // todo: change for ui router
                     .when('/login', {
                         templateUrl: 'views/auth/login.html',
                         login: true
