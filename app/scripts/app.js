@@ -19,35 +19,35 @@
     app.config(['$routeProvider', function ($routeProvider) {
             $routeProvider
                     .when('/login', {
-                        templateUrl: 'partials/login.html',
+                        templateUrl: 'views/auth/login.html',
                         login: true
                     })
                     .when('/signup', {
-                        templateUrl: 'partials/signup.html',
+                        templateUrl: 'views/auth/signup.html',
                         public: true
                     })
                     .when('/reset-password', {
-                        templateUrl: 'partials/resetpassword.html',
+                        templateUrl: 'views/auth/resetpassword.html',
                         public: true
                     })
                     .when('/set-password', {
-                        templateUrl: 'partials/setpassword.html',
+                        templateUrl: 'views/auth/setpassword.html',
                         set_password: true
                     })
                     .when('/verify-email', {
-                        templateUrl: 'partials/verifyemail.html',
+                        templateUrl: 'views/auth/verifyemail.html',
                         verify_email: true
                     })
                     .when('/list', {
-                        templateUrl: 'partials/list.html',
+                        templateUrl: 'views/list.html',
                         controller: 'List2Crtl'
                     })
                     .when('/dashboard', {
-                        templateUrl: 'partials/home.html',
+                        templateUrl: 'views/home.html',
                         controller: 'hCrtl'
                     })
                     .when('/error', {
-                        templateUrl: 'partials/error.html'
+                        templateUrl: 'views/error.html'
                     })
                     .otherwise({
                         redirectTo: '/dashboard'
