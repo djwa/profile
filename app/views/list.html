@@ -3,7 +3,7 @@
         <div  class="col-xs-{{gridColumn}}">
             <h1>Good fellas.</h1>
             <fellaslist>
-                <input class="form-control" type="text" ng-model="search.$" />    
+                <input class="form-control" type="text" ng-model="search.$" />
                 <ul class="list-group">
                     <li class="list-group-item clearfix" enter="shake" leave ng-repeat="fella in fellas| filter:search | orderBy:'name'">
                         <div class="col-lg-5">

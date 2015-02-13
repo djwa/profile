@@ -68,5 +68,4 @@
     app.run(function (user) {
         user.init({appId: '54b5067b4664e'});
     });
-
 })();
