@@ -2,7 +2,6 @@
     var list = angular.module('listControllers', ['listDirectives']);
     //service
     list.factory('fellaservice', ['$http', function ($http) {
-        //method1
         var listurl = 'http://localhost:3000/fellas';
         var listservice = {
 
@@ -12,17 +11,17 @@
                     url: listurl
                 });
             },
-            postData: function () {
+            postData: function (fella) {
                 return $http({
                     method: 'POST',
                     url: listurl,
-                    data: 'fella'
+                    data: JSON.stringify(fella)
                 });
             },
             removeData: function (id) {
                 return $http({
                     method: 'DELETE',
-                    url: listurl + id,
+                    url: listurl + '/' + id,
                     data: 'fella'
                 });
             }
@@ -56,16 +55,16 @@
             });
 
             $scope.addNew = function (fella) {
-                fellaservice.postData()
+                fellaservice.postData(fella)
                         .success(function (data) {
-//                            console.log(data);
 //                            $scope.msg = 'Data sent?: ' + JSON.stringify(data);
                             $scope.fellas = data;
                         })
-                        .error(function () {
-                            $scope.newList = false;
-                            $scope.msg = "Sorry but there was a connection problem. Data has not been injected. :(";
-                        });
+                    .error(function () {
+                        console.log(fella);
+                        $scope.newList = false;
+                        $scope.msg = "Sorry but there was a connection problem. Data has not been injected. :(";
+                    });
             };
 
 
@@ -79,40 +78,6 @@
                             $scope.msg = "If you want justice, you've come to the wrong place...";
                         });
             };
-
-
-
-//            $http.get('http://localhost:3000/fellas')
-//                    .success(function (data) {
-//                        $scope.fellas = data;
-//                    });
-//
-//
-//            $scope.addNew = function (fella) {
-//                $http.post('http://localhost:3000/fellas', fella)
-//                        .success(function (data) {
-////                            console.log(data);
-////                            $scope.msg = 'Data sent?: ' + JSON.stringify(data);
-//                            $scope.fellas = data;
-//                        })
-//                        .error(function () {
-//                            $scope.newList = false;
-//                            $scope.msg = "Sorry but there was a connection problem. Data has not been injected. :(";
-//                        });
-//            };
-//
-//            $scope.removeFella = function (id) {
-//                $http.delete('http://localhost:3000/fellas/' + id)
-//                        .success(function (data) {
-////                            console.log(data);
-//                            $scope.fellas = data;
-//                        })
-//                        .error(function () {
-//                            $scope.msg = "If you want justice, you've come to the wrong place...";
-//                        });
-//            };
-
-
 
         }]);
 })();
