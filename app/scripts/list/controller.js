@@ -26,10 +26,19 @@
             });
 
             $scope.addNew = function (fella) {
+                var defaultNull = {
+                    name: "",
+                    surname: "",
+                    company: "",
+                    email: "",
+                    phone: ""
+                }
                 fellaservice.postData(fella)
                         .success(function (data) {
 //                            $scope.msg = 'Data sent?: ' + JSON.stringify(data);
                             $scope.fellas = data;
+                            $scope.AddNewFella.$setPristine();
+                            $scope.fella = defaultNull;
                         })
                     .error(function () {
                         console.log(fella);
