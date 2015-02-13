@@ -17,16 +17,16 @@
             $scope.oldList = false;
             $scope.newList = true;
             $scope.currentList = 'new-list';
-            //scope of data
 
-            //method 1
+
+            //scope of data
             $scope.fellas = [];
             fellaservice.getData().success(function (data) {
                 $scope.fellas = data;
             });
 
             $scope.addNew = function (fella) {
-                var defaultNull = {
+                var resetFormInputs = {
                     name: "",
                     surname: "",
                     company: "",
@@ -38,7 +38,7 @@
 //                            $scope.msg = 'Data sent?: ' + JSON.stringify(data);
                             $scope.fellas = data;
                             $scope.AddNewFella.$setPristine();
-                            $scope.fella = defaultNull;
+                            $scope.fella = resetFormInputs;
                         })
                     .error(function () {
                         console.log(fella);

@@ -65,7 +65,17 @@
                 templateUrl: 'views/error.html'
             });
     }]);
-    app.run(function (user) {
+    app.run(function (user, $rootScope, $http) {
         user.init({appId: '54b5067b4664e'});
+        var token = user.token();
+        console.log(token);
+        // todo:followed by user app documentation this should be code should be provided
+        //$rootScope.$on('user.login', function() {
+        //    $http.defaults.headers.common.Authorization = 'Basic ' + btoa(':' + user.token());
+        //});
+        //
+        //$rootScope.$on('user.logout', function() {
+        //    $http.defaults.headers.common.Authorization = null;
+        //});
     });
 })();
