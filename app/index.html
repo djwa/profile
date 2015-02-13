@@ -17,19 +17,20 @@
                         <h2>JPA</h2>
                     </div>
                     <ul class="nav navbar-nav" ng-controller="SiteLocationCrtl">
-                        <li ng-class="{active: isActive('/dashboard')}"><a href="#/dashboard">home</a></li>
-                        <li ng-class="{active: isActive('/list')}"><a href="#/list">list</a></li>
+                        <!--todo:ui-sref-active-->
+                        <li ng-class="{active: isActive('/dashboard')}"><a ui-sref="dashboard">home</a></li>
+                        <li ng-class="{active: isActive('/list')}"><a ui-sref="list">list</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right log-out">
-                        <li><a href="#/login" ua-logout>log out</a></li>
+                        <li><a ui-sref="login" ua-logout>log out</a></li>
                     </ul>
                 </div>
             </nav>
-            <div class="fadein fadeout view {{ pageClass}}" ng-view></div><!--todo: change on ui router-->
+            <div class="fadein fadeout view {{ pageClass}}" ui-view></div><!--todo: change on ui router-->
         </main>
         <!--todo: implement requirejs-->
         <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
-        <script type="text/javascript" src="../bower_components/angular-route/angular-route.js"></script>
+        <script type="text/javascript" src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
         <script type="text/javascript" src="../bower_components/angular-animate/angular-animate.js"></script>
         <script type="text/javascript" src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>
         <script type="text/javascript" src="scripts/app.js"></script>
