@@ -6,7 +6,8 @@
         'homeControllers',
         'ngAnimate',
         'UserApp',
-        'ui.bootstrap'
+        'ui.bootstrap',
+        'ngStorage'
     ]);
     app.controller('PathsCrtl', ['$scope', function ($scope) {
             $scope.LogoImgPath = "http://djwa.pl/angular-logo.png";
@@ -65,17 +66,16 @@
                 templateUrl: 'views/error.html'
             });
     }]);
-    app.run(function (user, $rootScope, $http) {
+    app.run(function (user, $rootScope) {
         user.init({appId: '54b5067b4664e'});
-        var token = user.token();
-        console.log(token);
-        // todo:followed by user app documentation this should be code should be provided
-        //$rootScope.$on('user.login', function() {
-        //    $http.defaults.headers.common.Authorization = 'Basic ' + btoa(':' + user.token());
-        //});
-        //
-        //$rootScope.$on('user.logout', function() {
-        //    $http.defaults.headers.common.Authorization = null;
-        //});
+        $rootScope.$on('user.login', function () {
+            var token = user.token();
+            localStorage.setItem('UserToken', token);
+        });
+        //todo:https://github.com/gsklee/ngStorage
+        $rootScope.$on('user.logout', function () {
+            localStorage.removeItem("UserToken");
+        });
     });
+    console.log(localStorage.getItem('UserToken'));
 })();

@@ -18,7 +18,6 @@
             $scope.newList = true;
             $scope.currentList = 'new-list';
 
-
             //scope of data
             $scope.fellas = [];
             fellaservice.getData().success(function (data) {
