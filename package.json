@@ -22,7 +22,8 @@
     "cors": "^2.5.3",
     "express": "~4.11.1",
     "mongoose": "~3.8.22",
-    "body-parser": "~1.10.2"
+    "body-parser": "~1.10.2",
+    "userapp": "~2.0.0"
   },
   "devDependencies": {
     "grunt-cli": "~0.1.13"

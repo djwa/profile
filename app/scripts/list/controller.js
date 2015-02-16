@@ -10,7 +10,7 @@
                 $scope.fellas = data;
             });
         }]);
-    list.controller('List2Crtl', ['$http', '$scope', 'fellaservice', function ($http, $scope, fellaservice) {
+    list.controller('List2Crtl', ['$scope', 'fellaservice', function ($scope, fellaservice) {
             //scope of visibility aspects
             $scope.pageClass = "listPage";
             $scope.gridColumn = 6;
