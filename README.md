@@ -22,3 +22,6 @@ http://adrianmejia.com/blog/2014/10/01/creating-a-restful-api-tutorial-with-node
 Add the path to windows for mongodb.
 Import JSON data.
 =======
+
+
+git checkout -- .idea/
