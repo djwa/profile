@@ -1,5 +1,7 @@
-(function () {
-    var list = angular.module('listControllers', ['listDirectives','listService']);
+define(['./module'], function(list){
+    'use strict';
+
+    var list = angular.module('listControllers', ['listDirectives','listService']); // todo: inject service properly
     list.controller('ListCrtl', ['$http', '$scope', function ($http, $scope) {
             $scope.pageClass = "listPage";
             $scope.gridColumn = 12;
@@ -59,5 +61,4 @@
             };
 
         }]);
-})();
-
+});
