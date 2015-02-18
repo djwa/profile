@@ -6163,9 +6163,15 @@ button.close {
     display: none !important;
   }
 }
-html {
-  overflow: scroll;
+<<<<<<< HEAD
+=======
+topbar {
+  display: block;
+  width: 100%;
+  height: 10px;
+  background: #f15929;
 }
+>>>>>>> ed6947837a82a0789ed12e1718f47458448b8d14
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -6174,12 +6180,8 @@ body {
   background: #604788;
   font-size: 16px;
 }
-.view {
-  margin-top: 70px;
-}
 h1 {
   font-size: 2.2em;
-  color: #ffffff;
 }
 .form-control {
   border-radius: 4px 4px 0 0;
@@ -6190,9 +6192,6 @@ h1 {
 }
 #main-list ul li:nth-of-type(1) {
   border-radius: 0px;
-}
-.home-view {
-  color: #ffffff;
 }
 .login-box {
   margin: 100px auto 0;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <title>djwaProfile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        <script type="text/javascript" src="modules/home/controller.js"></script>
+        <script type="text/javascript" src="modules/list/controller.js"></script>
+        <script type="text/javascript" src="modules/list/directive.js"></script>
+        <script type="text/javascript" src="bower_components/userapp/userapp.client.js"></script>
+        <script type="text/javascript" src="bower_components/userapp-angular/angularjs.userapp.js"></script>
+    </head>
+    <body>
+<<<<<<< HEAD
+        <main id="main-list" class="wrapper">
+            <section ng-show="user.authenticated">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#/home">home</a></li>
+                            <li><a href="#/list">list</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#/login" ua-logout>log out</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <h1 enter="shake" leave>Good fellas.</h1>
+            </section>
+            <div ng-view></div>
+        </main>
+    </body>
+=======
+    <topbar></topbar>
+    <section id="main-list" class="wrapper">
+        <ul class="menu" ng-show="user.authenticated">
+            <li><a href="#/home">home</a></li>
+            <li><a href="#/list">list</a></li>
+            <li><a href="#/login" ua-logout>log out</a></li>
+        </ul>
+        <h1 enter="shake" leave>Good fellas.</h1>
+        <div ng-view></div>
+    </section>
+    <footer></footer>
+</body>
+>>>>>>> ed6947837a82a0789ed12e1718f47458448b8d14
+</html>
