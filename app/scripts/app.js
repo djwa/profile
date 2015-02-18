@@ -1,6 +1,6 @@
 define([
     'angular',
-    'angular-cookies',
+    'Cookies',
     'angular-ui-router',
     'angular-animate',
     'ui.bootstrap',
@@ -17,7 +17,6 @@ define([
         'app.common',
         'app.home',
         'app.list',
-        'ngCookies',
         'ui.router',
         'ngAnimate',
         'UserApp',

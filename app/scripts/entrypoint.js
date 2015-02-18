@@ -3,7 +3,7 @@ require.config({
     paths: {
         'domReady': '../../bower_components/requirejs-domready/domReady',
         'angular': '../../bower_components/angular/angular',
-        'angular-cookies': '../../bower_components/angular-cookies/angular-cookies',
+        'Cookies': '../../bower_components/cookies-js/dist/cookies',
         'angular-ui-router': '../../bower_components/angular-ui-router/release/angular-ui-router',
         'angular-animate': '../../bower_components/angular-animate/angular-animate',
         'ui.bootstrap': '../../bower_components/angular-bootstrap/ui-bootstrap',
@@ -14,8 +14,8 @@ require.config({
         'angular': {
             exports: 'angular'
         },
-        'angular-cookies': {
-            deps: ['angular']
+        'Cookies': {
+            exports: 'Cookies'
         },
         'angular-ui-router': {
             deps: ['angular']
@@ -30,10 +30,9 @@ require.config({
             exports: 'userapp'
         },
         'userapp-angular': {
-            deps: ['angular', 'userapp']
+            deps: ['angular', 'userapp', 'Cookies']
         }
     }
-//    deps: ['./bootstrap'] // ??
 });
 
 require(['./bootstrap'], function () {
