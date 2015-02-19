@@ -10,7 +10,7 @@ define([
     './common/index',
     './home/index',
     './list/index'
-], function(ng){
+], function(ng, cookies){
     'use strict';
 
     window.Cookies = cookies;
