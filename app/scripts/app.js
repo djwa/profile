@@ -13,6 +13,8 @@ define([
 ], function(ng){
     'use strict';
 
+    window.Cookies = cookies;
+
     var dependencies = [
         'app.common',
         'app.home',
