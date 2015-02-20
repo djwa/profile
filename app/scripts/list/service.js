@@ -1,11 +1,12 @@
-define(['./module'], function () {
+define(['./module'], function (module) {
 
-    var listService = angular.module('listService', []);
+    Service.$inject = [
+        '$http'
+    ];
 
-    listService.factory('fellaservice', ['$http', function ($http) {
+    function Service($http) {
         var listurl = 'http://localhost:3000/fellas';
         var listservice = {
-
             getData: function () {
                 return $http({
                     method: 'GET',
@@ -28,6 +29,8 @@ define(['./module'], function () {
             }
         };
         return listservice;
-    }]);
+    }
+
+    module.factory('fellaservice', Service);
 
 });

@@ -25,3 +25,9 @@ Import JSON data.
 
 
 git checkout -- .idea/
+
+
+=======
+
+problem with UserApp when using angularjs with require js - Cookie.js lib is not loaded properly
+https://github.com/userapp-io/userapp-angular/issues/12

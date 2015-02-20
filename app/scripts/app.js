@@ -1,6 +1,6 @@
 define([
     'angular',
-    'angular-cookies',
+    'Cookies',
     'angular-ui-router',
     'angular-animate',
     'ui.bootstrap',
@@ -10,14 +10,15 @@ define([
     './common/index',
     './home/index',
     './list/index'
-], function(ng){
+], function(ng, cookies){
     'use strict';
+
+    window.Cookies = cookies;
 
     var dependencies = [
         'app.common',
         'app.home',
         'app.list',
-        'ngCookies',
         'ui.router',
         'ngAnimate',
         'UserApp',
