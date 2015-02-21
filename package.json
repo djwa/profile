@@ -26,6 +26,14 @@
     "userapp": "~2.0.0"
   },
   "devDependencies": {
-    "grunt-cli": "~0.1.13"
+    "grunt": "~0.4.5",
+    "time-grunt": "~1.0.0",
+    "load-grunt-tasks": "~3.1.0",
+    "load-grunt-configs": "~0.4.2",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-usemin": "~3.0.0",
+    "requirejs": "~2.1.16",
+    "grunt-contrib-less": "~1.0.0"
   }
 }
