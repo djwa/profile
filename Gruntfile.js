@@ -5,26 +5,45 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
     require('time-grunt')(grunt);
 
-//    var config = {
-//        appConfig: {
-//            app: require('./bower.json').appPath || 'app',
-//            dist: 'dist'
-//        }
-//    };
+    var config = {
+        less: {
+            development: {
+                options: {
+                    paths: 'app/styles/' //less
+                },
+                files: {
+                    'css/styles.css' : 'app/styles/main.less'
+                }
+            }
+        },
+        useminPrepare: {
+            html: 'app/index.html',
+            options: {
+                dest: 'build'
+            }
+        },
+        usemin: {
+            html: ['build/index.html']
+        },
+        copy: {
+            task1: {
+                src: 'app/index.html',
+                dest: 'build/index.html'
+            }
+        }
+    };
+    //https://www.youtube.com/watch?v=gs7HB9gjfCs
 //    config = require('load-grunt-configs')(grunt, config);
-//    grunt.initConfig(config);
-
-
-//https://www.youtube.com/watch?v=gIbfDxF69c8
-//https://www.youtube.com/watch?v=Jgm4dV8-Xv0
-
-    grunt.initConfig({
-
-    });
+    grunt.initConfig(config);
 
 
     grunt.registerTask('build', [
-        'copy:dist'
+        'copy:task1',
+        'less:development',
+        'useminPrepare',
+        'concat',
+        'cssmin',
+        'usemin'
     ]);
 
 };
