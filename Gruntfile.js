@@ -41,7 +41,7 @@ module.exports = function (grunt) {
         'copy:task1',
         'less:development',
         'useminPrepare',
-        'concat',
+//        'concat',
         'cssmin',
         'usemin'
     ]);
