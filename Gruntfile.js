@@ -12,7 +12,7 @@ module.exports = function (grunt) {
                     paths: 'app/styles/' //less
                 },
                 files: {
-                    'css/styles.css' : 'app/styles/main.less'
+                    'build/styles/styles.css' : 'app/styles/main.less'
                 }
             }
         },
