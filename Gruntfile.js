@@ -9,10 +9,11 @@ module.exports = function (grunt) {
         less: {
             development: {
                 options: {
+                    compress: true,
                     paths: 'app/styles/' //less
                 },
                 files: {
-                    'build/styles/styles.css' : 'app/styles/main.less'
+                    'build/styles/styles.min.css' : 'app/styles/main.less'
                 }
             }
         },
@@ -42,7 +43,7 @@ module.exports = function (grunt) {
         'less:development',
         'useminPrepare',
 //        'concat',
-        'cssmin',
+//        'cssmin',
         'usemin'
     ]);
 
