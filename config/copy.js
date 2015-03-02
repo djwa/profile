@@ -1,9 +1,6 @@
 module.exports = {
-    dist: {
-        files: {
-            expand: true,
-            src: ['app/*'],
-            dest: 'dist/'
-        }
+    task1: {
+        src: 'app/index.html',
+        dest: 'build/index.html'
     }
 };

@@ -6,35 +6,14 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt);
 
     var config = {
-        less: {
-            development: {
-                options: {
-                    compress: true,
-                    paths: 'app/styles/' //less
-                },
-                files: {
-                    'build/styles/styles.min.css' : 'app/styles/main.less'
-                }
-            }
-        },
-        useminPrepare: {
-            html: 'app/index.html',
-            options: {
-                dest: 'build'
-            }
-        },
-        usemin: {
-            html: ['build/index.html']
-        },
-        copy: {
-            task1: {
-                src: 'app/index.html',
-                dest: 'build/index.html'
-            }
+        appConfig: {
+//            app: require('./bower.json').appPath || 'app',
+            dist: 'build',
+            server: '.tmp'
         }
     };
     //https://www.youtube.com/watch?v=gs7HB9gjfCs
-//    config = require('load-grunt-configs')(grunt, config);
+    config = require('load-grunt-configs')(grunt, config);
     grunt.initConfig(config);
 
 
@@ -42,8 +21,6 @@ module.exports = function (grunt) {
         'copy:task1',
         'less:development',
         'useminPrepare',
-//        'concat',
-//        'cssmin',
         'usemin'
     ]);
 
