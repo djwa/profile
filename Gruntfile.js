@@ -12,7 +12,7 @@ module.exports = function (grunt) {
             server: '.tmp'
         }
     };
-    //https://www.youtube.com/watch?v=gs7HB9gjfCs
+    //https://www.youtube.com/watch?v=gs7HB9gjfCs for spites etc. blah blah blah
     config = require('load-grunt-configs')(grunt, config);
     grunt.initConfig(config);
 
@@ -22,7 +22,12 @@ module.exports = function (grunt) {
         'requirejs',
         'less:development',
         'useminPrepare',
-        'usemin'
+        'usemin',
+        'processhtml',
+    ]);
+
+    grunt.registerTask('serve', [
+        'connect:dist'
     ]);
 
 };
