@@ -6,7 +6,7 @@ module.exports = function(grunt, appConfig) {
                 paths: 'app/styles/' //less
             },
             files: {
-                'build/styles/styles.min.css': 'app/styles/main.less'
+                '<%= appConfig.dist %>/styles/styles.min.css': '<%= appConfig.app %>/styles/main.less'
             }
         }
     }

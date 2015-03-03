@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 
     var config = {
         appConfig: {
-//            app: require('./bower.json').appPath || 'app',
+            app: require('./bower.json').appPath || 'app',
             dist: 'build',
             server: '.tmp'
         }
