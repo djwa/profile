@@ -28,6 +28,9 @@
             </nav>
             <div class="fadein fadeout view {{ pageClass}}" ui-view></div><!--todo: change on ui router-->
         </main>
-        <script type="text/javascript" src="../bower_components/requirejs/require.js" data-main="scripts/entrypoint.js"></script>
+        <!-- build:[data-main] scripts/main.min.js -->
+        <!--<script src="vendor/requirejs/require.js" data-main="scripts/main.min.js"></script>-->
+        <script src="vendor/requirejs/require.js" data-main="scripts/entrypoint.js"></script>
+        <!-- /build -->
     </body>
 </html>
