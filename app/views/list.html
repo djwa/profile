@@ -5,8 +5,7 @@
                 <h1>Bad fellas.</h1>
             </header>
             <fellaslist>
-                <input class="form-control" type="text" placeholder="...search for fellas" ng-model="search.$" />    
-                <ul class="list-group">
+                <input class="form-control" type="text" placeholder="...search for fellas" ng-model="search.$" />                 <ul class="list-group">
                     <li class="list-group-item clearfix" enter="shake" leave ng-repeat="fella in fellas| filter:search | orderBy:'surname'">
                         <div class="col-xs-4">
                             <p>{{ fella.name + " " + fella.surname}}</p>
