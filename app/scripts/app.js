@@ -27,16 +27,19 @@ define([
 
     return ng.module('app', dependencies)
 
-    .run(function (user, $rootScope) {
-        user.init({appId: '54b5067b4664e'});
-        $rootScope.$on('user.login', function () {
-            var token = user.token();
-            localStorage.setItem('UserToken', token);
-        });
-        //todo: CRUCIAL - finish token verification with userApp
-        $rootScope.$on('user.logout', function () {
-            localStorage.removeItem("UserToken");
-        });
-    });
+        .run([
+            'user',
+            '$rootScope',
+            function (user, $rootScope) {
+                user.init({appId: '54b5067b4664e'});
+                $rootScope.$on('user.login', function () {
+                    var token = user.token();
+                    localStorage.setItem('UserToken', token);
+                });
+                //todo: CRUCIAL - finish token verification with userApp
+                $rootScope.$on('user.logout', function () {
+                    localStorage.removeItem("UserToken");
+                });
+            }]);
 
 });
