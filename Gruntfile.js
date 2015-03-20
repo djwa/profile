@@ -27,7 +27,8 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('serve', [
-        'connect:dist'
+        'connect:dist',
+        'watch'
     ]);
 
 };

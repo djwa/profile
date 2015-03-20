@@ -5,10 +5,31 @@ module.exports = function (grunt, config) {
             hostname: '0.0.0.0',
             livereload: 35721
         },
+        livereload: {
+            options: {
+                open: false,
+                middleware: function (connect) {
+                    return [
+                        connect.static('.tmp'),
+                        connect().use(
+                            '/bower_components',
+                            connect.static('./bower_components')
+                        ),
+                        connect().use(
+                            '/vendor',
+                            connect.static(config.appConfig.dist + '/vendor')
+                        ),
+                        connect.static(config.appConfig.app)
+                    ];
+                }
+            }
+        },
         dist: {
             options: {
                 open: false,
-                base: '<%= appConfig.dist %>'
+                port: 7000,
+                livereload: true,
+                base: '<%= appConfig.dist %>/'
             }
         }
     }
