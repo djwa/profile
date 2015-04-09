@@ -1,23 +1,54 @@
-html {overflow-y: scroll;}
-.wrapper {max-width: 1200px; margin: 0 auto;}
+html {
+  overflow-y: scroll;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 body {
-    font-size: @font-rate;
-    background: @brand-color1;
+  font-size: @font-rate;
+  background: @brand-color1;
 }
-main {}
+
+main {
+}
+
 .view {
-    padding-top: 70px;
-    padding-bottom: 20px;
-    min-height:100vh;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  min-height: 100vh;
 }
+
 nav {
-    .logo {
-        width: 120px;
-        height: 50px;
-        float: left;
-        margin: 0px 10px;
-        img {width: auto; max-height: 70px; padding: 5px; display: block; float: left;}
-        h2 {color: @brand-color1; font-size: 1em; display: block; float: left; line-height: 0.8em; font-weight: bold;}
+  .logo {
+    width: 120px;
+    height: 50px;
+    float: left;
+    margin: 0px 10px;
+    img {
+      width: auto;
+      max-height: 70px;
+      padding: 5px;
+      display: block;
+      float: left;
     }
-    .log-out {padding-right: 20px;}
+    h2 {
+      color: @brand-color1;
+      font-size: 1em;
+      display: block;
+      float: left;
+      line-height: 0.8em;
+      font-weight: bold;
+    }
+  }
+  .log-out {
+    padding-right: 20px;
+  }
 }
