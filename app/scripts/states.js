@@ -4,11 +4,18 @@ define(['./app'], function (app) {
     return app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/dashboard');
         $stateProvider
+            .state('home', {
+                url: '/home',
+                templateUrl: 'views/public/index.html',
+                data: {
+                    login: true
+                }
+            })
             .state('login', {
                 url: '/login',
                 templateUrl: 'views/auth/login.html',
                 data: {
-                    login: true
+                    public: true
                 }
             })
             .state('signup', {
