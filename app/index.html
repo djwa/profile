@@ -23,11 +23,16 @@
                         <li ng-class="{active: isActive('/list')}"><a ui-sref="list">list</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right log-out">
-                        <li><a ui-sref="login" ua-logout>log out</a></li>
+                        <li>
+                            <a ui-sref="login" ua-logout>
+                                <span class="glyphicon glyphicon-off"></span>
+                                <span class="text-after-icon"></span>Log out
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
-            <div class="fadein fadeout view {{ pageClass}}" ui-view></div><!--todo: change on ui router-->
+            <div class="fadein fadeout view {{ pageClass}}" ui-view></div>
         </main>
         <!-- build:[data-main] scripts/main.min.js -->
         <script src="vendor/requirejs/require.js" data-main="scripts/main.min.js"></script>

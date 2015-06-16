@@ -4,17 +4,33 @@
             <div class="home-view">
                 <p>We're at home!</p>
             </div>
-            <a class="btn btn-primary" href="" ng-click="lion = !lion" ng-class="{ active: lion }">Lion</a>
-            <a class="btn btn-success" href="" ng-click="wolf = !wolf" ng-class="{ active: wolf }">Wolf</a>
+            <a class="btn btn-primary" href="" ng-click="tasks = !tasks" ng-class="{ active: tasks }">Tasks</a>
+            <a class="btn btn-success" href="" ng-click="enhancements = !enhancements" ng-class="{ active: enhancements }">Enhancements</a>
             <div class="row">
                 <div class="col-xs-6">
-                    <div class="jumbotron slide-down slide-up" ng-show="lion">
-                        <p>I am the lion!</p>
+                    <div class="jumbotron slide-down slide-up" ng-show="tasks">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+                                <span class="text-after-icon">check/setup mongoDB</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+                                <span class="text-after-icon">bootstrap Java Script</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+                                <span class="text-after-icon">create environments for DEV and LIVE</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-xs-6">
-                    <div class="jumbotron slide-down slide-up" ng-show="wolf">
-                        <p>I am the wolf!</p>
+                    <div class="jumbotron slide-down slide-up" ng-show="enhancements">
+                        <ul class="list-group">
+                            <li class="list-group-item">build in the D5 chart</li>
+                            <li class="list-group-item">build in angular-carousel</li>
+                        </ul>
                     </div>
                 </div>
             </div>

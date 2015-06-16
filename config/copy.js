@@ -12,7 +12,8 @@ module.exports = {
                 src: [
                     'index.html',
                     'images/*',
-                    'views/**/*.html'
+                    'views/**/*.html',
+                    'fonts/**/.*'
                 ]
             },
             {
@@ -20,6 +21,12 @@ module.exports = {
                 cwd: 'bower_components',
                 src: 'requirejs/*.js',
                 dest: '<%= appConfig.dist %>/vendor/'
+            },
+            {
+                expand: true,
+                cwd: 'bower_components/bootstrap/dist',
+                src: 'fonts/*',
+                dest: '<%= appConfig.dist %>'
             }
         ]}
 };

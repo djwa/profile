@@ -16,6 +16,14 @@ module.exports = function (grunt) {
     config = require('load-grunt-configs')(grunt, config);
     grunt.initConfig(config);
 
+    grunt.registerTask('update', 'install the backend and frontend dependencies', function () {
+        var exec = require('child_process').exec;
+        var cb = this.async();
+        exec('bower update', null, function (err, stdout, stderr) {
+            console.log(stdout);
+            cb();
+        });
+    });
 
     grunt.registerTask('build', [
         'copy:dist',
@@ -27,6 +35,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('serve', [
+        'update',
         'connect:dist',
         'watch'
     ]);

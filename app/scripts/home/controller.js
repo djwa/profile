@@ -3,8 +3,8 @@ define(['./module'], function(home){
 
 //    var home = angular.module('homeControllers', []);
     home.controller('hCrtl', ['$scope', function ($scope) {
-        $scope.lion = false;
-        $scope.wolf = false;
+        $scope.tasks = false;
+        $scope.enhancements = false;
         $scope.pageClass = "homePage";
     }]);
 });
