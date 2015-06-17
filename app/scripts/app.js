@@ -3,6 +3,7 @@ define([
     'Cookies',
     'angular-ui-router',
     'angular-animate',
+    'angular-sanitize',
     'ui.bootstrap',
     'userapp',
     'userapp-angular',
@@ -21,6 +22,7 @@ define([
         'app.list',
         'ui.router',
         'ngAnimate',
+        'ngSanitize',
         'UserApp',
         'ui.bootstrap'
     ];

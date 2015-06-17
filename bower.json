@@ -15,10 +15,11 @@
     "requirejs": "~2.1.16",
     "requirejs-domready": "~2.0.1",
     "cookies-js": "~1.2.1",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "angular-sanitize": "~1.4.1"
   },
   "resolutions": {
-    "angular": "~1.3.10"
+    "angular": "1.3.16"
   },
   "devDependencies": {
     "ng-scrollbar": "~0.0.7"

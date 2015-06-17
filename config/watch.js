@@ -10,7 +10,7 @@ module.exports = {
         files: [
             '<%= appConfig.app %>/styles/*.less',
             '<%= appConfig.app %>/scripts/*.js',
-            '<%= appConfig.app %>/views/*.html',
+            '<%= appConfig.app %>/views/**/*.html',
             '<%= appConfig.app %>/index.html'
         ],
         tasks: ['build']
