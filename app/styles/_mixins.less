@@ -10,3 +10,110 @@
     -webkit-border-radius: @i;
     -moz-border-radius: @i;
 }
+
+
+
+//stupid way
+.lab-beaker-icon(@SCALE) {
+    @ICON_WIDTH: 300px;
+    @RADIUS: 23px;
+    @LAB_COLOR: white;
+    @BUBBLE1: 37px;
+    @BUBBLE2: 30px;
+    position: relative;
+    width: 300px;
+    height: 328px;
+    div {
+        position: absolute;
+    }
+    .all {
+        transform: scale(@SCALE,@SCALE);
+        -webkit-transform: scale(@SCALE,@SCALE);
+        width: @ICON_WIDTH;
+        height: 328px;
+        bottom: 0;
+        top: 50px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        .bubble1 {
+            width: @BUBBLE1;
+            height: @BUBBLE1;
+            border-radius: @BUBBLE1;
+            border: @BUBBLE1/6 solid @LAB_COLOR;
+            top: 96px;
+            left: 127px;
+        }
+        .bubble2 {
+            width: @BUBBLE2;
+            height: @BUBBLE2;
+            border-radius: @BUBBLE2;
+            border: @BUBBLE2/6 solid @LAB_COLOR;
+            top: 156px;
+            left: 149px;
+        }
+        .top {
+            background: @LAB_COLOR;
+            width: 160px;
+            height: @RADIUS + 5px;
+            top: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+        }
+        .left-side-top {
+            width: @RADIUS;
+            background: @LAB_COLOR;
+            height: 146px;
+            left: 92px;
+            top: 0;
+            border-radius: @RADIUS;
+        }
+        .right-side-top {
+            width: @RADIUS;
+            background: @LAB_COLOR;
+            position: absolute;
+            height: 146px;
+            right: 92px;
+            top: 0;
+            border-radius: @RADIUS;
+        }
+        .left-side-bottom {
+            background: @LAB_COLOR;
+            left: 46px;
+            bottom: -10px;
+            height: 225px;
+            width: @RADIUS;
+            border-radius: @RADIUS;
+            transform: rotate(27deg);
+            -webkit-transform: rotate(27deg);
+        }
+        .right-side-bottom {
+            background: @LAB_COLOR;
+            right: 46px;
+            bottom: -10px;
+            height: 225px;
+            width: @RADIUS;
+            border-radius: @RADIUS;
+            transform: rotate(-27deg);
+            -webkit-transform: rotate(-27deg);
+        }
+        .filling {
+            border-bottom: 130px solid @LAB_COLOR;
+            border-left: 68px solid transparent;
+            border-right: 60px solid transparent;
+            height: 0;
+            width: 250px;
+            bottom: 0;
+            right: 0;
+            border-radius: 0 0 2*@RADIUS 0;
+        }
+        .bottom {
+            width: @ICON_WIDTH;
+            height: @RADIUS;
+            border-radius: @RADIUS;
+            background: @LAB_COLOR;
+            bottom: 0;
+        }
+    }
+}
