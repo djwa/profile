@@ -9,8 +9,8 @@ define([
     'userapp-angular',
     //my modules
     './common/index',
-    './home/index',
-    './list/index'
+    './dashboard/home/index',
+    './dashboard/list/index'
 ], function(ng, cookies){
     'use strict';
 
