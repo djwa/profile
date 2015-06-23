@@ -1,6 +1,10 @@
 define(['./module'], function (module) {
     'use strict';
 
+    Controller0.$inject = [
+        '$scope'
+    ];
+
     Controller1.$inject = [
         '$scope'
     ];
@@ -8,6 +12,10 @@ define(['./module'], function (module) {
         '$scope',
         '$location'
     ];
+
+    function Controller0($scope) {
+        $scope.ScriptLoaded = true;
+    }
 
     function Controller1($scope) {
         $scope.LogoImgPath = "http://djwa.pl/angular-logo.png";
@@ -19,6 +27,7 @@ define(['./module'], function (module) {
         };
     }
 
+    module.controller('ScriptLoadedCrtl', Controller0);
     module.controller('PathsCrtl', Controller1);
     module.controller('SiteLocationCrtl', Controller2);
 });
