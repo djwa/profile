@@ -70,12 +70,29 @@ h1:hover {
   opacity: 0;
 }
 
+.content-holder.ng-leave {
+  nav.app-nav {
+    -webkit-animation: 0.5s slideDown ease;
+    animation: 0.5s slideDown ease;
+  }
+}
+
 .slide-down.ng-hide-add {
   -webkit-animation: 0.5s slideDown ease;
   animation: 0.5s slideDown ease;
 }
 
 .slide-up.ng-hide-remove {
+  -webkit-animation: 0.5s slideUp ease;
+  animation: 0.5s slideUp ease;
+}
+
+.slide-down {
+  -webkit-animation: 0.5s slideDown ease;
+  animation: 0.5s slideDown ease;
+}
+
+.slide-up {
   -webkit-animation: 0.5s slideUp ease;
   animation: 0.5s slideUp ease;
 }

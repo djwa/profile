@@ -2,7 +2,7 @@ define(['./app'], function (app) {
     'use strict';
 
     return app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise('/dashboard');
+        $urlRouterProvider.otherwise('/dashboard/home');
         $stateProvider
             .state('home', {
                 url: '/home',
@@ -42,15 +42,23 @@ define(['./app'], function (app) {
                 templateUrl: 'views/auth/verifyemail.html',
                 verify_email: true
             })
-            .state('list', {
-                url: '/list',
-                templateUrl: 'views/list.html',
-                controller: 'List2Crtl'
-            })
             .state('dashboard', {
-                url: '/dashboard',
-                templateUrl: 'views/home.html',
+                name: 'dashboard',
+                templateUrl: '../views/dashboard/master.html'
+            })
+            .state('dashboard.home', {
+                name: 'dashboard.home',
+                parent: 'dashboard',
+                url: '/dashboard/home',
+                templateUrl: '../views/dashboard/home/home.html',
                 controller: 'hCrtl'
+            })
+            .state('dashboard.list', {
+                name: 'dashboard.list',
+                parent: 'dashboard',
+                url: '/dashboard/list',
+                templateUrl: '../views/dashboard/list/list.html',
+                controller: 'List2Crtl'
             })
             .state('error', {
                 url: '/error',

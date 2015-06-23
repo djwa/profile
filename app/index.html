@@ -10,45 +10,24 @@
         <!--todo: preserve file path for dev env-->
     </head>
     <body ng-controller="ScriptLoadedCrtl">
-    <div class="script-pre-loader" ng-class="{ 'remove-pre-loader' : ScriptLoaded }">
-        <div class="lab-beaker-icon">
-            <div class="all">
-                <div class="bubble1"></div>
-                <div class="bubble2"></div>
-                <div class="top"></div>
-                <div class="left-side-top"></div>
-                <div class="right-side-top"></div>
-                <div class="left-side-bottom"></div>
-                <div class="right-side-bottom"></div>
-                <div class="filling"></div>
-                <div class="bottom"></div>
-            </div>
-        </div>
-    </div>
         <main ng-class="{ 'app-mode' : user.authenticated, 'public-mode' : !user.authenticated }">
-            <nav ng-show="user.authenticated" class="navbar navbar-default navbar-fixed-top slide-down slide-up"
-                 role="navigation">
-                <div>
-                    <div class="logo" ng-controller='PathsCrtl'>
-                        <img ng-src="{{LogoImgPath}}" alt="Jeremi's Practice"/>
-                        <h2>JPA</h2>
+            <div class="fadein fadeout view content-holder {{ pageClass }}" ui-view>
+                <div class="script-pre-loader" ng-class="{ 'remove-pre-loader' : ScriptLoaded }">
+                    <div class="lab-beaker-icon">
+                        <div class="all">
+                            <div class="bubble1"></div>
+                            <div class="bubble2"></div>
+                            <div class="top"></div>
+                            <div class="left-side-top"></div>
+                            <div class="right-side-top"></div>
+                            <div class="left-side-bottom"></div>
+                            <div class="right-side-bottom"></div>
+                            <div class="filling"></div>
+                            <div class="bottom"></div>
+                        </div>
                     </div>
-                    <ul class="nav navbar-nav" ng-controller="SiteLocationCrtl">
-                        <!--todo:ui-sref-active-->
-                        <li ng-class="{active: isActive('/dashboard')}"><a ui-sref="dashboard">home</a></li>
-                        <li ng-class="{active: isActive('/list')}"><a ui-sref="list">list</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right log-out">
-                        <li>
-                            <a ui-sref="login" ua-logout>
-                                <span class="glyphicon glyphicon-off"></span>
-                                <span class="text-after-icon"></span>Log out
-                            </a>
-                        </li>
-                    </ul>
                 </div>
-            </nav>
-            <div class="fadein fadeout view {{ pageClass }}" ui-view></div>
+            </div>
         </main>
         <!-- build:[data-main] scripts/main.min.js -->
         <script src="vendor/requirejs/require.js" data-main="scripts/main.min.js"></script>
