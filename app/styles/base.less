@@ -68,8 +68,115 @@ nav {
   z-index: 99999;
   visibility: visible;
 
-  .lab-beaker-icon {
-    .lab-beaker-icon(.5);
+  &:after {
+    content:'';
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: @brand-color1a;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    display: block;
+  }
+
+  @SIZE: 150px;
+  .elements-bootstrap {
+    width: @SIZE + (@SIZE/2);
+    height: @SIZE * 1.5;
+    z-index: 1;
+    .center-absolute();
+
+    .loading-wrap {
+      width: @SIZE;
+      height: @SIZE;
+      border-radius: @SIZE;
+      z-index: 1;
+      .center-absolute();
+
+      .loading-ring {
+        background: @brand-color2;
+        width: @SIZE;
+        height: @SIZE;
+        border-radius: @SIZE;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        .bounce(1s);
+      }
+      .lab-beaker-icon {
+        width: @SIZE - 8px;
+        height: @SIZE - 8px;
+        border-radius: @SIZE;
+        background: @brand-color1b;
+        z-index: 2;
+
+        //blowing-bubble1 bubble
+        .extra-bubbles {
+          .center-absolute();
+          left: -30px;
+          top: 10px;
+          width: 100%;
+
+          .bubble {
+            width: 10px;
+            height: 10px;
+            background: transparent;
+            border-radius: 10px;
+            border: 2px solid @brand-color2;
+            position: absolute;
+
+            &:nth-child(1) {
+              left: 40%;
+            }
+            &:nth-child(2) {
+              left: 50%;
+            }
+            &:nth-child(3) {
+              left: 65%;
+            }
+          }
+        }
+
+        .center-absolute();
+        .lab-beaker-icon(.2);
+        .all {
+          left: -(@SIZE/2) - 5px;
+          top: 20px;
+        }
+      }
+    }
+
+    p {
+      text-align: center;
+      color: @brand-color0;
+      display: inline-block;
+      font-size: 1.2em;
+      z-index: 3;
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+      right: 0;
+      span {
+        color: @brand-color2;
+      }
+    }
+  }
+
+  .big-bobble {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    border-radius: 100px;
+    border: 10px solid @brand-color2;
+    position: absolute;
+    left: 400px;
+    top: 300px;
+
+    .flying(2s);
   }
 
   &.remove-pre-loader {

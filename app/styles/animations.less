@@ -343,3 +343,73 @@ h1:hover {
     opacity: 1;
   }
 }
+
+
+//animation mixins
+.bounce(@TIME) {
+  .animation(bounce @TIME infinite ease-in-out);
+
+  @-webkit-keyframes bounce {
+    0%, 100% {
+      .scale(0.99);
+    }
+    50% {
+      .scale(1.03);
+    }
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      .scale(0.99);
+    }
+    50% {
+      .scale(1.03);
+    }
+  }
+}
+
+.flying(@TIME) {
+  .animation(flying @TIME infinite ease-in-out);
+
+  @-webkit-keyframes flying {
+    0% {
+      .scale(1);
+    }
+    25% {
+      .scale(2);
+    }
+    50% {
+      .scale(1);
+    }
+    75% {
+      .scale(2);
+      background: @brand-color2;
+    }
+    100% {
+      .scale(3);
+      opacity: 0;
+      background: @brand-color2;
+    }
+  }
+
+  @keyframes flying {
+    0% {
+      .scale(1);
+    }
+    20% {
+      .scale(2);
+    }
+    50% {
+      .scale(1);
+    }
+    75% {
+      .scale(2);
+      background: @brand-color2;
+    }
+    100% {
+      .scale(3);
+      opacity: 0;
+      background: @brand-color2;
+    }
+  }
+}

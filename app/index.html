@@ -3,16 +3,45 @@
     <head>
         <title>djwa APP</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui, height=device-height, target-densityDpi=device-dpi">
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
         <link rel="stylesheet" type="text/css" href="styles/styles.min.css" />
         <!--todo: preserve file path for dev env-->
     </head>
     <body ng-controller="ScriptLoadedCrtl">
+    <div class="script-pre-loader">
+        <!--ng-class="{ 'remove-pre-loader' : ScriptLoaded }"-->
+        <div class="big-bobble"></div>
+        <div class="elements-bootstrap">
+            <div class="loading-wrap">
+                <div class="lab-beaker-icon">
+                    <div class="extra-bubbles">
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                        <div class="bubble"></div>
+                    </div>
+                    <div class="all">
+                        <div class="bubble1"></div>
+                        <div class="bubble2"></div>
+                        <div class="top"></div>
+                        <div class="left-side-top"></div>
+                        <div class="right-side-top"></div>
+                        <div class="left-side-bottom"></div>
+                        <div class="right-side-bottom"></div>
+                        <div class="filling"></div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+                <div class="loading-ring"></div>
+            </div>
+            <p><span><b>{</b>{</span> APP IS COOKING <span>}<b>}</b></span></p>
+        </div>
+    </div>
         <main ng-class="{ 'app-mode' : user.authenticated, 'public-mode' : !user.authenticated }">
             <div class="fadein fadeout view content-holder {{ pageClass }}" ui-view>
-                <div class="script-pre-loader" ng-class="{ 'remove-pre-loader' : ScriptLoaded }">
+                <div class="script-pre-loader">
                     <div class="lab-beaker-icon">
                         <div class="all">
                             <div class="bubble1"></div>
