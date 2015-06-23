@@ -26,7 +26,7 @@ main {
 }
 
 .content-holder {
-  padding-top: 70px;
+  padding-top: 0px;
 }
 
 nav {
@@ -118,7 +118,6 @@ nav {
         .extra-bubbles {
           .center-absolute();
           left: -30px;
-          top: 10px;
           width: 100%;
 
           .bubble {
@@ -130,12 +129,17 @@ nav {
             position: absolute;
 
             &:nth-child(1) {
-              left: 40%;
+              .flying(2s, 15%);
+              .animation-delay(-1.2s);
+              left: 60%;
             }
             &:nth-child(2) {
+              .flying(2s, 17%);
+              .animation-delay(-.8s);
               left: 50%;
             }
             &:nth-child(3) {
+              .flying(2s, 25%);
               left: 65%;
             }
           }
@@ -147,6 +151,12 @@ nav {
           left: -(@SIZE/2) - 5px;
           top: 20px;
         }
+        //.bubble1 {
+        //  .flying(2s, 25%);
+        //}
+        //.bubble2 {
+        //  .flying(2s, 45%);
+        //}
       }
     }
 
@@ -166,18 +176,19 @@ nav {
     }
   }
 
-  .big-bobble {
-    width: 100px;
-    height: 100px;
-    background: transparent;
-    border-radius: 100px;
-    border: 10px solid @brand-color2;
-    position: absolute;
-    left: 400px;
-    top: 300px;
-
-    .flying(2s);
-  }
+//<!--<div class="big-bobble"></div>-->
+  //.big-bobble {
+  //  width: 100px;
+  //  height: 100px;
+  //  background: transparent;
+  //  border-radius: 100px;
+  //  border: 10px solid @brand-color2;
+  //  position: absolute;
+  //  left: 400px;
+  //  top: 30%;
+  //
+  //  .flying(12s, 25%);
+  //}
 
   &.remove-pre-loader {
     opacity: 0;

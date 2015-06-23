@@ -363,30 +363,87 @@ h1:hover {
       .scale(0.99);
     }
     50% {
-      .scale(1.03);
+      .scale(1.04);
     }
   }
 }
 
-.flying(@TIME) {
+.flying(@TIME, @TOP) {
   .animation(flying @TIME infinite ease-in-out);
+
+
 
   @-webkit-keyframes flying {
     0% {
+      top: @TOP;
+      .scale(.8);
+    }
+    5% {
+      top: @TOP - 1%;
+    }
+    10% {
+      top: @TOP - 2%;
+    }
+    15% {
+      top: @TOP - 3%;
+    }
+    20% {
+      top: @TOP - 4%;
       .scale(1);
     }
     25% {
-      .scale(2);
+      top: @TOP - 5%;
+    }
+    30% {
+      top: @TOP - 6%;
+    }
+    35% {
+      top: @TOP - 7%;
+    }
+    40% {
+      top: @TOP - 8%;
+    }
+    45% {
+      top: @TOP - 9%;
     }
     50% {
-      .scale(1);
+      top: @TOP - 10%;
+      .scale(.8);
     }
-    75% {
-      .scale(2);
+    55% {
+      top: @TOP - 11%;
+    }
+    60% {
+      top: @TOP - 12%;
+    }
+    65% {
+      top: @TOP - 13%;
+    }
+    70% {
+      top: @TOP - 14%;
+      .scale(1.3);
+      opacity: 1;
       background: @brand-color2;
     }
+    75% {
+      top: @TOP - 15%;
+    }
+    80% {
+      top: @TOP - 16%;
+    }
+    85% {
+      opacity: .2;
+      top: @TOP - 17%;
+    }
+    90% {
+      top: @TOP - 18%;
+    }
+    95% {
+      top: @TOP - 19%;
+    }
     100% {
-      .scale(3);
+      top: @TOP - 20%;
+      .scale(1.5);
       opacity: 0;
       background: @brand-color2;
     }
@@ -394,20 +451,75 @@ h1:hover {
 
   @keyframes flying {
     0% {
-      .scale(1);
+      top: @TOP;
+      .scale(.8);
+    }
+    5% {
+      top: @TOP - 1%;
+    }
+    10% {
+      top: @TOP - 2%;
+    }
+    15% {
+      top: @TOP - 3%;
     }
     20% {
-      .scale(2);
-    }
-    50% {
+      top: @TOP - 4%;
       .scale(1);
     }
-    75% {
-      .scale(2);
+    25% {
+      top: @TOP - 5%;
+    }
+    30% {
+      top: @TOP - 6%;
+    }
+    35% {
+      top: @TOP - 7%;
+    }
+    40% {
+      top: @TOP - 8%;
+    }
+    45% {
+      top: @TOP - 9%;
+    }
+    50% {
+      top: @TOP - 10%;
+      .scale(.8);
+    }
+    55% {
+      top: @TOP - 11%;
+    }
+    60% {
+      top: @TOP - 12%;
+    }
+    65% {
+      top: @TOP - 13%;
+    }
+    70% {
+      top: @TOP - 14%;
+      .scale(1.3);
+      opacity: 1;
       background: @brand-color2;
     }
+    75% {
+      top: @TOP - 15%;
+    }
+    80% {
+      top: @TOP - 16%;
+    }
+    85% {
+      top: @TOP - 17%;
+      opacity: .2;
+    }
+    90% {
+      top: @TOP - 18%;
+    }
+    95% {
+      top: @TOP - 19%;
+    }
     100% {
-      .scale(3);
+      top: @TOP - 20%;
+      .scale(1.5);
       opacity: 0;
       background: @brand-color2;
     }
