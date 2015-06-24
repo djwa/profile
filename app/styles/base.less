@@ -56,7 +56,6 @@ nav {
   }
 }
 
-
 .second-bg {background-color: @SECOND_BG;}
 
 .script-pre-loader {
@@ -129,17 +128,17 @@ nav {
             position: absolute;
 
             &:nth-child(1) {
-              .flying(2s, 15%);
+              .flying-blowing-bubble(2s, 15%, @brand-color2);
               .animation-delay(-1.2s);
               left: 60%;
             }
             &:nth-child(2) {
-              .flying(2s, 17%);
+              .flying-blowing-bubble(2s, 17%, @brand-color2);
               .animation-delay(-.8s);
               left: 50%;
             }
             &:nth-child(3) {
-              .flying(2s, 25%);
+              .flying-blowing-bubble(2s, 25%, @brand-color2);
               left: 65%;
             }
           }
@@ -150,13 +149,22 @@ nav {
         .all {
           left: -(@SIZE/2) - 5px;
           top: 20px;
+          .bubble1 {
+            .flying-bubble(2s, 35%);
+          }
+          .bubble2 {
+            .flying-bubble2(1s, 60%);
+            .animation-delay(-2s);
+            .animation-duration(3s);
+            left: 56%!important;
+          }
+          .bubble3 {
+            .flying-bubble2(1s, 60%);
+            .animation-duration(2s);
+            left: 40%!important;
+            display: block!important;
+          }
         }
-        //.bubble1 {
-        //  .flying(2s, 25%);
-        //}
-        //.bubble2 {
-        //  .flying(2s, 45%);
-        //}
       }
     }
 
@@ -187,7 +195,7 @@ nav {
   //  left: 400px;
   //  top: 30%;
   //
-  //  .flying(12s, 25%);
+  //  .flying(12s, 25%, @brand-color2);
   //}
 
   &.remove-pre-loader {
