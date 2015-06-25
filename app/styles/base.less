@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:700,400);
+
 html {
   overflow-y: scroll;
 }
@@ -130,17 +132,20 @@ nav {
             position: absolute;
 
             &:nth-child(1) {
-              .flying-blowing-bubble(2s, 15%, @brand-color2);
-              .animation-delay(-1.2s);
-              left: 60%;
+              .fly-and-blow1(1s, @brand-color2, 20px, 1.3);
+              .animation-delay(-.8s);
+              top:15px;
+              left:60%;
             }
             &:nth-child(2) {
-              .flying-blowing-bubble(2s, 17%, @brand-color2);
-              .animation-delay(-.8s);
+              .fly-and-blow1(1s, @brand-color2, 20px, 1.3);
+              .animation-delay(-.5s);
+              top:20px;
               left: 50%;
             }
             &:nth-child(3) {
-              .flying-blowing-bubble(2s, 25%, @brand-color2);
+              .fly-and-blow1(1s, @brand-color2, 20px, 1.3);
+              top:10px;
               left: 65%;
             }
           }
@@ -151,19 +156,23 @@ nav {
         .all {
           left: -(@SIZE/2) - 5px;
           top: 20px;
+          -moz-transform-origin: 50% 12%; //fix for mozilla - related to transform scaling
           .bubble1 {
-            .flying-bubble(2s, 35%);
+            .fly-and-blow2(.7s, transparent, 80px, 1);
+            .animation-delay(-.5s);
+            top: 60px;
+            left: 50%!important;
           }
           .bubble2 {
-            .flying-bubble2(1s, 60%);
-            .animation-delay(-2s);
-            .animation-duration(3s);
+            .fly-and-blow2(.2s, transparent, 80px, 1);
             left: 56%!important;
+            top: 80px;
           }
           .bubble3 {
-            .flying-bubble2(1s, 60%);
-            .animation-duration(2s);
+            .fly-and-blow2(.4s, transparent, 80px, 1);
+            .animation-delay(-1s);
             left: 40%!important;
+            top: 70px;
             display: block!important;
           }
         }
@@ -171,17 +180,23 @@ nav {
     }
 
     p {
+      font-family: Arial;
       text-align: center;
       color: @brand-color0;
       display: inline-block;
-      font-size: 1.2em;
+      font-size: 1.1em;
       z-index: 3;
       position: absolute;
       bottom: -14px;
       left: 0;
       right: 0;
+      font-weight: bold;
       span {
         color: @brand-color2;
+        font-size: 1.2em;
+        b {
+          font-weight: bolder;
+        }
       }
     }
   }
