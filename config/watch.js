@@ -8,7 +8,7 @@ module.exports = {
             livereload: '<%= connect.options.livereload %>'
         },
         files: [
-            '<%= appConfig.app %>/styles/*.less',
+            '<%= appConfig.app %>/styles/**/*.less',
             '<%= appConfig.app %>/scripts/*.js',
             '<%= appConfig.app %>/views/**/*.html',
             '<%= appConfig.app %>/index.html'
