@@ -26,12 +26,14 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('build', [
+        'clean:dist',
+        'imagemin',
         'copy:dist',
         'requirejs',
         'less:development',
         'useminPrepare',
         'usemin',
-        'processhtml',
+        'processhtml'
     ]);
 
     grunt.registerTask('serve', [

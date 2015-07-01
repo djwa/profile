@@ -11,7 +11,7 @@ module.exports = {
                 dest: '<%= appConfig.dist %>',
                 src: [
                     'index.html',
-                    'images/*',
+                    //'images/*',
                     'views/**/*.html',
                     'fonts/**/.*'
                 ]

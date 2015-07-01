@@ -18,7 +18,7 @@ define(['./module'], function (module) {
     }
 
     function Controller1($scope) {
-        $scope.LogoImgPath = "http://djwa.pl/angular-logo.png";
+        $scope.LogoImgPath = "images/angular-logo.png";
     }
 
     function Controller2($scope, $location) {

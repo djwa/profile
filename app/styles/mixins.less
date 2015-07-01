@@ -41,12 +41,12 @@
 
 
 //simplifier
-.lab-beaker-icon(@SCALE) {
+.lab-beaker-icon(@SCALE, @LAB_COLOR, @OPACITY) {
     @ICON_WIDTH: 300px;
     @RADIUS: 23px;
-    @LAB_COLOR: white;
     @BUBBLE1: 37px;
     @BUBBLE2: 30px;
+    opacity: @OPACITY;
 
     div {
         position: absolute;
