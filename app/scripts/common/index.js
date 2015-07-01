@@ -1,5 +1,6 @@
 define([
-    './controller'
+    './controllers/main',
+    './controllers/imagesLocation'
 ], function(){
 
 });

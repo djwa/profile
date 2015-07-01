@@ -44,20 +44,20 @@ define(['./app'], function (app) {
             })
             .state('dashboard', {
                 name: 'dashboard',
-                templateUrl: '../views/dashboard/master.html'
+                templateUrl: 'views/dashboard/master.html'
             })
             .state('dashboard.home', {
                 name: 'dashboard.home',
                 parent: 'dashboard',
                 url: '/dashboard/home',
-                templateUrl: '../views/dashboard/home/home.html',
+                templateUrl: 'views/dashboard/home/home.html',
                 controller: 'hCrtl'
             })
             .state('dashboard.list', {
                 name: 'dashboard.list',
                 parent: 'dashboard',
                 url: '/dashboard/list',
-                templateUrl: '../views/dashboard/list/list.html',
+                templateUrl: 'views/dashboard/list/list.html',
                 controller: 'List2Crtl'
             })
             .state('error', {
