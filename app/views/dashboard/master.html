@@ -1,24 +1,2 @@
-<div class="dashboard-navbar">
-    <nav ng-show="user.authenticated" class="app-nav navbar navbar-default navbar-fixed-top slide-up slide-down" role="navigation">
-        <div>
-            <div class="logo" ng-controller='imagePathCrtl'>
-                <img ng-src="{{LogoImgPath}}" alt="Jeremi's Practice"/>
-                <h2>JPA</h2>
-            </div>
-            <ul class="nav navbar-nav">
-                <!--todo:ui-sref-active-->
-                <li ng-class="{active: isActive('/dashboard/home')}"><a ui-sref="dashboard.home">home</a></li>
-                <li ng-class="{active: isActive('/dashboard/list')}"><a ui-sref="dashboard.list">list</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right log-out">
-                <li>
-                    <a ui-sref="login" ua-logout>
-                        <span class="glyphicon glyphicon-off"></span>
-                        <span class="text-after-icon">Log out</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</div>
-<div class="dashboard-content view {{ pageClass }}" ui-view></div>
+<div class="dashboard-navbar" ui-view="navbar"></div>
+<div class="dashboard-content view {{ pageClass }}" ui-view="content"></div>

@@ -1,3 +1,66 @@
+//animation workflow for pages
+@TIME_LIMIT: .7s;
+
+.ng-enter {
+  z-index: 1;
+}
+
+.ng-leave {
+  z-index: 2;
+}
+
+.master-view {
+  &.dashboard-master {
+    .transition(all @TIME_LIMIT)!important; //if using child transition animations, they should all be under this time value, keyframe animations are different
+  }
+}
+
+.dashboard-navbar {
+  .animated;
+  z-index:11;
+}
+
+.dashboard-content {
+  .animated;
+  z-index:10;
+}
+
+.master-view.ng-enter {
+  .dashboard-navbar {
+    .slide-up {
+      -webkit-animation: @TIME_LIMIT slideUp ease!important;
+      animation: @TIME_LIMIT slideUp ease!important;
+    }
+  }
+  .dashboard-content {
+    .fadeInUp();
+  }
+}
+
+.master-view.ng-leave {
+  .zoomOutDown();
+  .dashboard-navbar{
+    .slide-down {
+      -webkit-animation: @TIME_LIMIT slideDown ease!important;
+      animation: @TIME_LIMIT slideDown ease!important;
+    }
+  }
+  .dashboard-content {
+    .fadeOutDown();
+  }
+}
+
+.dashboard-content.ng-enter {
+  .slideInRight();
+}
+.dashboard-content.ng-leave {
+  .slideOutLeft();
+}
+
+
+//--------------
+
+
 h1 {
   transition: color 0.5s;
 }
@@ -6,10 +69,6 @@ h1:hover {
   color: @brand-color2;
 }
 
-.shake {
-  animation: shake 0.1s normal;
-  -webkit-animation: shake 0.1s normal;
-}
 
 .login-form-animations {
   input {
@@ -37,13 +96,13 @@ h1:hover {
 
 // angular animations
 
-.ng-enter {
-  z-index: 1;
-}
-
-.ng-leave {
-  z-index: 2;
-}
+//.ng-enter {
+//  z-index: 1;
+//}
+//
+//.ng-leave {
+//  z-index: 2;
+//}
 //
 //.fadein.ng-enter,
 //.fadeout.ng-leave {
@@ -78,28 +137,28 @@ h1:hover {
 //    animation: 0.5s slideDown ease;
 //  }
 //}
-//
-//
-//.slide-down.ng-hide-add {
-//  -webkit-animation: 0.5s slideDown ease;
-//  animation: 0.5s slideDown ease;
-//}
-//
-//.slide-up.ng-hide-remove {
-//  -webkit-animation: 0.5s slideUp ease;
-//  animation: 0.5s slideUp ease;
-//}
-//
-//.slide-down {
-//  -webkit-animation: 0.5s slideDown ease;
-//  animation: 0.5s slideDown ease;
-//}
-//
-//.slide-up {
-//  -webkit-animation: 0.5s slideUp ease;
-//  animation: 0.5s slideUp ease;
-//}
-//
+
+
+.slide-down.ng-hide-add {
+  -webkit-animation: 0.5s slideDown ease;
+  animation: 0.5s slideDown ease;
+}
+
+.slide-up.ng-hide-remove {
+  -webkit-animation: 0.5s slideUp ease;
+  animation: 0.5s slideUp ease;
+}
+
+.slide-down {
+  -webkit-animation: 0.5s slideDown ease;
+  animation: 0.5s slideDown ease;
+}
+
+.slide-up {
+  -webkit-animation: 0.5s slideUp ease;
+  animation: 0.5s slideUp ease;
+}
+
 //.listPage.ng-leave {
 //  -webkit-transform-origin: 0% 0%;
 //  -webkit-animation: rotateFall 1s both ease-in;
@@ -201,151 +260,57 @@ h1:hover {
 //  }
 //}
 //
-////keyframes
-//
-//@keyframes shake {
-//  0% {
-//    margin-left: 5px;
-//    animation-timing-function: ease-in-out;
-//  }
-//  10% {
-//    margin-left: 0px;
-//    animation-timing-function: ease-in-out;
-//  }
-//  20% {
-//    margin-left: -5px;
-//    animation-timing-function: ease-in-out;
-//  }
-//  30% {
-//    margin-left: 0px;
-//    animation-timing-function: ease-in-out;
-//  }
-//  40% {
-//    margin-left: 5px;
-//    animation-timing-function: ease-in-out;
-//  }
-//  50% {
-//    margin-left: 0px;
-//    animation-timing-function: ease-in-out;
-//  }
-//  60% {
-//    margin-left: -5px;
-//    animation-timing-function: ease-in-out;
-//  }
-//  70% {
-//    margin-left: 0px;
-//    animation-timing-function: ease-in-out;
-//  }
-//  80% {
-//    margin-left: 5px;
-//    animation-timing-function: ease-in-out;
-//  }
-//  90% {
-//    margin-left: 0px;
-//    animation-timing-function: ease-in-out;
-//  }
-//  100% {
-//    margin-left: -5px;
-//    animation-timing-function: ease-in-out;
-//  }
-//}
-//
-//@-webkit-keyframes shake {
-//  0% {
-//    margin-left: 5px;
-//    -webkit-animation-timing-function: ease-in-out;
-//  }
-//  10% {
-//    margin-left: 0px;
-//    -webkit-animation-timing-function: ease-in-out;
-//  }
-//  20% {
-//    margin-left: -5px;
-//    -webkit-animation-timing-function: ease-in-out;
-//  }
-//  30% {
-//    margin-left: 0px;
-//    -webkit-animation-timing-function: ease-in-out;
-//  }
-//  40% {
-//    margin-left: 5px;
-//    -webkit-animation-timing-function: ease-in-out;
-//  }
-//  50% {
-//    margin-left: 0px;
-//    -webkit-animation-timing-function: ease-in-out;
-//  }
-//  60% {
-//    margin-left: -5px;
-//    -webkit-animation-timing-function: ease-in-out;
-//  }
-//  70% {
-//    margin-left: 0px;
-//    -webkit-animation-timing-function: ease-in-out;
-//  }
-//  80% {
-//    margin-left: 5px;
-//    -webkit-animation-timing-function: ease-in-out;
-//  }
-//  90% {
-//    margin-left: 0px;
-//    -webkit-animation-timing-function: ease-in-out;
-//  }
-//  100% {
-//    margin-left: -5px;
-//    -webkit-animation-timing-function: ease-in-out;
-//  }
-//}
-//
-//@-webkit-keyframes slideDown {
-//  0% {
-//    opacity: 1;
-//  }
-//
-//  100% {
-//    -webkit-transform: translate3d(0, -100%, 0);
-//    transform: translate3d(0, -100%, 0);
-//    opacity: 0;
-//  }
-//}
-//
-//@keyframes slideDown {
-//  0% {
-//    opacity: 1;
-//  }
-//
-//  100% {
-//    -webkit-transform: translate3d(0, -100%, 0);
-//    -ms-transform: translate3d(0, -100%, 0);
-//    transform: translate3d(0, -100%, 0);
-//    opacity: 0;
-//  }
-//}
-//
-//@-webkit-keyframes slideUp {
-//
-//  0% {
-//    -webkit-transform: translate3d(0, -100%, 0);
-//    transform: translate3d(0, -100%, 0);
-//    opacity: 0;
-//  }
-//  100% {
-//    opacity: 1;
-//  }
-//}
-//
-//@keyframes slideUp {
-//
-//  0% {
-//    -webkit-transform: translate3d(0, -100%, 0);
-//    -ms-transform: translate3d(0, -100%, 0);
-//    transform: translate3d(0, -100%, 0);
-//    opacity: 0;
-//  }
-//  100% {
-//    opacity: 1;
-//  }
-//}
+
+
+@-webkit-keyframes slideDown {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideUp {
+
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 
 //animation mixins
@@ -376,7 +341,7 @@ h1:hover {
 //use bootstrap mixins!
 
 
-
+//DEDICATED ANIMATIONS!!!!!!!!!!!!!!!!!
 
 .fly-and-blow1(@TIME, @FILLING_COLOR, @STARTING_POSITION_Y, @END_SCALE) {
   .animation(fly-and-blow1 @TIME infinite ease-in-out);
@@ -445,21 +410,3 @@ h1:hover {
     }
   }
 }
-
-
-
-
-
-
-
-
-.master-view {
-  .transition(all 1s);
-
-  .dashboard-navbar, .dashboard-content {
-    .transition(all .5s ease-out);
-  }
-}
-
-
-

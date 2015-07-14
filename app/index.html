@@ -12,7 +12,7 @@
     </head>
     <body>
         <main ng-class="{ 'app-mode' : user.authenticated, 'public-mode' : !user.authenticated }">
-            <div class="master-view view {{ pageClass }}" ui-view>
+            <div class="master-view view {{ pageClass }}" ui-view="master">
                 <div class="script-pre-loader">
                     <div class="elements-bootstrap">
                         <div class="loading-wrap">

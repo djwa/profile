@@ -9,6 +9,7 @@ define(['./../module'], function (module) {
         $scope.isActive = function (route) {
             return route === $location.path();
         };
+        console.log('i am dashboardMaster controller!');
     }
     module.controller('dashboardMaster', Controller);
 });

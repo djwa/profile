@@ -6,68 +6,102 @@ define(['./app'], function (app) {
         $stateProvider
             .state('home', {
                 url: '/home',
-                templateUrl: 'views/public/index.html',
+                views: {
+                    'master' : {
+                        templateUrl: 'views/public/index.html'
+                    }
+                },
                 data: {
                     login: true
                 }
             })
             .state('login', {
                 url: '/login',
-                templateUrl: 'views/auth/login.html',
+                views: {
+                    'master' : {
+                        templateUrl: 'views/auth/login.html'
+                    }
+                },
                 data: {
                     public: true
                 }
             })
             .state('signup', {
                 url: '/signup',
-                templateUrl: 'views/auth/signup.html',
+                views: {
+                    'master' : {
+                        templateUrl: 'views/auth/signup.html'
+                    }
+                },
                 data: {
                     public: true
                 }
             })
             .state('reset-password', {
                 url: '/reset-password',
-                templateUrl: 'views/auth/resetpassword.html',
+                views: {
+                    'master' : {
+                        templateUrl: 'views/auth/resetpassword.html'
+                    }
+                },
                 data: {
                     public: true
                 }
             })
             .state('set-password', {
                 url: '/set-password',
-                templateUrl: 'views/auth/setpassword.html',
+                views: {
+                    'master' : {
+                        templateUrl: 'views/auth/setpassword.html'
+                    }
+                },
                 set_password: true
             })
             .state('verify-email', {
                 url: '/verify-email',
-                templateUrl: 'views/auth/verifyemail.html',
+                views: {
+                    'master' : {
+                        templateUrl: 'views/auth/verifyemail.html'
+                    }
+                },
                 verify_email: true
             })
             .state('dashboard', {
                 name: 'dashboard',
-                templateUrl: 'views/dashboard/master.html',
-                controller: 'dashboardMaster'
-                //views: {
-                //    "content": {
-                //        templateUrl: 'views/dashboard/home/home.html'
-                //    },
-                //    "navbar": {
-                //        templateUrl: 'views/dashboard/common/navbar.html'
-                //    }
-                //}
+                views: {
+                    'master': {
+                        templateUrl: 'views/dashboard/master.html',
+                        controller: 'dashboardMaster'
+                    },
+                    "content@dashboard": {
+                        templateUrl: 'views/dashboard/home/home.html'
+                    },
+                    "navbar@dashboard": {
+                        templateUrl: 'views/dashboard/common/navbar.html'
+                    }
+                }
             })
             .state('dashboard.home', {
                 name: 'dashboard.home',
                 parent: 'dashboard',
                 url: '/dashboard/home',
-                templateUrl: 'views/dashboard/home/home.html',
-                controller: 'hCrtl'
+                views: {
+                    'content@dashboard' : {
+                        templateUrl: 'views/dashboard/home/home.html',
+                        controller: 'hCrtl'
+                    }
+                }
             })
             .state('dashboard.list', {
                 name: 'dashboard.list',
                 parent: 'dashboard',
                 url: '/dashboard/list',
-                templateUrl: 'views/dashboard/list/list.html',
-                controller: 'List2Crtl'
+                views: {
+                    'content@dashboard' : {
+                        templateUrl: 'views/dashboard/list/list.html',
+                        controller: 'List2Crtl'
+                    }
+                }
             })
             .state('error', {
                 url: '/error',
