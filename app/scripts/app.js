@@ -9,8 +9,7 @@ define([
     'userapp-angular',
     //my modules
     './common/index',
-    './dashboard/home/index',
-    './dashboard/list/index'
+    './dashboard/index'
 ], function(ng, cookies){
     'use strict';
 
@@ -18,8 +17,7 @@ define([
 
     var dependencies = [
         'app.common',
-        'app.home',
-        'app.list',
+        'app.dashboard',
         'ui.router',
         'ngAnimate',
         'ngSanitize',

@@ -12,7 +12,7 @@
     </head>
     <body>
         <main ng-class="{ 'app-mode' : user.authenticated, 'public-mode' : !user.authenticated }">
-            <div class="fadein fadeout view content-holder {{ pageClass }}" ui-view>
+            <div class="view content-holder {{ pageClass }}" ui-view>
                 <div class="script-pre-loader">
                     <div class="elements-bootstrap">
                         <div class="loading-wrap">

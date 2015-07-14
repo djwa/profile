@@ -1,7 +1,7 @@
 define([
-    './controller',
-    './directive',
-    './service'
+    './controllers/controller',
+    './direvtives/directive',
+    './services/service'
 ],function(){
 
 });

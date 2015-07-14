@@ -1,5 +1,5 @@
 define([
-    './controller'
+    './controllers/controller'
 ],function(){
 
 });

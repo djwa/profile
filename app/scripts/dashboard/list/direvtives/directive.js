@@ -1,4 +1,4 @@
-define(['./module'], function() {
+define(['./../module'], function() {
     'use strict';
 
 //    todo: modify to requirejs!!!!!!!!!

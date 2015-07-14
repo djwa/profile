@@ -44,7 +44,8 @@ define(['./app'], function (app) {
             })
             .state('dashboard', {
                 name: 'dashboard',
-                templateUrl: 'views/dashboard/master.html'
+                templateUrl: 'views/dashboard/master.html',
+                controller: 'dashboardMaster'
             })
             .state('dashboard.home', {
                 name: 'dashboard.home',
@@ -66,6 +67,4 @@ define(['./app'], function (app) {
             });
     }])
 
-
 });
-

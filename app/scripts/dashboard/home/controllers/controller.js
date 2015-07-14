@@ -1,4 +1,4 @@
-define(['./module'], function(home){
+define(['./../module'], function(home){
     'use strict';
 
 //    var home = angular.module('homeControllers', []);
