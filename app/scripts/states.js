@@ -46,6 +46,14 @@ define(['./app'], function (app) {
                 name: 'dashboard',
                 templateUrl: 'views/dashboard/master.html',
                 controller: 'dashboardMaster'
+                //views: {
+                //    "content": {
+                //        templateUrl: 'views/dashboard/home/home.html'
+                //    },
+                //    "navbar": {
+                //        templateUrl: 'views/dashboard/common/navbar.html'
+                //    }
+                //}
             })
             .state('dashboard.home', {
                 name: 'dashboard.home',

@@ -5,8 +5,10 @@
                 <h1>Bad fellas.</h1>
             </header>
             <fellaslist>
-                <input class="form-control" type="text" placeholder="...search for fellas" ng-model="search.$" />                 <ul class="list-group">
-                    <li class="list-group-item clearfix" enter="shake" leave ng-repeat="fella in fellas| filter:search | orderBy:'surname'">
+                <input class="form-control" type="text" placeholder="...search for fellas" ng-model="search.$"/>
+                <ul class="list-group">
+                    <li class="list-group-item clearfix" enter="shake" leave
+                        ng-repeat="fella in fellas| filter:search | orderBy:'surname'">
                         <div class="col-xs-4">
                             <p>{{ fella.name + " " + fella.surname}}</p>
                         </div>
@@ -14,7 +16,9 @@
                             <p>{{ fella.company}}</p>
                         </div>
                         <div class="col-xs-3">
-                            <button class="btn btn-danger dropdown-toggle pull-right" ng-click="removeFella(fella._id)">X</button>
+                            <button class="btn btn-danger dropdown-toggle pull-right" ng-click="removeFella(fella._id)">
+                                X
+                            </button>
                         </div>
                     </li>
                 </ul>
@@ -26,19 +30,24 @@
             </header>
             <form name="AddNewFella" ng-submit="addNew(fella)">
                 <div class="form-group">
-                    <input type="text" ng-model="fella.name" class="form-control" placeholder="Enter first name" required>
+                    <input type="text" ng-model="fella.name" class="form-control" placeholder="Enter first name"
+                           required>
                 </div>
                 <div class="form-group">
-                    <input type="text" ng-model="fella.surname" class="form-control" placeholder="Enter last name" required>
+                    <input type="text" ng-model="fella.surname" class="form-control" placeholder="Enter last name"
+                           required>
                 </div>
                 <div class="form-group">
-                    <input type="text" ng-model="fella.company" class="form-control" placeholder="Enter company name" required>
+                    <input type="text" ng-model="fella.company" class="form-control" placeholder="Enter company name"
+                           required>
                 </div>
                 <div class="form-group">
-                    <input type="email" ng-model="fella.email" class="form-control" placeholder="Enter email"  unique-email required>
+                    <input type="email" ng-model="fella.email" class="form-control" placeholder="Enter email"
+                           unique-email required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" ng-model="fella.phone" class="form-control" placeholder="Enter phone number" required>
+                    <input type="tel" ng-model="fella.phone" class="form-control" placeholder="Enter phone number"
+                           required>
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
                 <!--ng-disabled="!AddNewFella.$valid"-->
