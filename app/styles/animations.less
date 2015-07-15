@@ -1,19 +1,67 @@
-//animation workflow for pages
-@TIME_LIMIT: .7s;
+//*********************************
+//animations workflow between views
+//*********************************
+
+@MASTER_TIME_LIMIT: 1s; //time of entrances/exits for MASTER views
+@TIME_LIMIT: 2s; //time of entrances/exits for nested views
 
 .ng-enter {
   z-index: 1;
 }
-
 .ng-leave {
   z-index: 2;
 }
 
 .master-view {
   &.dashboard-master {
-    .transition(all @TIME_LIMIT)!important; //if using child transition animations, they should all be under this time value, keyframe animations are different
+    .transition(all @TIME_LIMIT); // required for nested views
   }
 }
+
+.master-view.ng-enter {
+  .animated;
+  .fadeIn();
+}
+
+.master-view.ng-leave {
+  .animated;
+  .fadeOut();
+  //.zoomOutDown();
+}
+
+//animations to the dashboard entry and exit
+
+.master-view.dashboard-master.ng-enter {
+  .animation-duration(@TIME_LIMIT);
+  .dashboard-navbar {
+    .slide-up {
+      -webkit-animation: @TIME_LIMIT slideUp ease!important;
+      animation: @TIME_LIMIT slideUp ease!important;
+    }
+    .animation-duration(@TIME_LIMIT);
+  }
+  .dashboard-content {
+    .fadeInUp();
+    .animation-duration(@TIME_LIMIT);
+  }
+}
+
+.master-view.dashboard-master.ng-leave {
+  .animation-duration(@TIME_LIMIT);
+  .dashboard-navbar{
+    .slide-down {
+      -webkit-animation: @TIME_LIMIT slideDown ease!important;
+      animation: @TIME_LIMIT slideDown ease!important;
+    }
+    .animation-duration(@TIME_LIMIT);
+  }
+  .dashboard-content {
+    .fadeOutDown();
+    .animation-duration(@TIME_LIMIT);
+  }
+}
+
+//animations between dashboard pages
 
 .dashboard-navbar {
   .animated;
@@ -25,37 +73,15 @@
   z-index:10;
 }
 
-.master-view.ng-enter {
-  .dashboard-navbar {
-    .slide-up {
-      -webkit-animation: @TIME_LIMIT slideUp ease!important;
-      animation: @TIME_LIMIT slideUp ease!important;
-    }
-  }
-  .dashboard-content {
-    .fadeInUp();
-  }
-}
-
-.master-view.ng-leave {
-  .zoomOutDown();
-  .dashboard-navbar{
-    .slide-down {
-      -webkit-animation: @TIME_LIMIT slideDown ease!important;
-      animation: @TIME_LIMIT slideDown ease!important;
-    }
-  }
-  .dashboard-content {
-    .fadeOutDown();
-  }
-}
-
 .dashboard-content.ng-enter {
   .slideInRight();
+  //.animation-duration(10s);
 }
 .dashboard-content.ng-leave {
   .slideOutLeft();
+  //.animation-duration(10s);
 }
+
 
 
 //--------------
