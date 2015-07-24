@@ -1,5 +1,6 @@
 require.config({
 //    baseUrl: './', // ??
+//    waitSeconds: 120,
     paths: {
         'domReady': '../../bower_components/requirejs-domready/domReady',
         'angular': '../../bower_components/angular/angular',
