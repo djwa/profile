@@ -37,7 +37,7 @@ module.exports = function (grunt) {
     ]);
 
     grunt.registerTask('serve', [
-        'update',
+        //'update',
         'connect:dist',
         'watch'
     ]);
